@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+    @variants responsive {
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    }
+}
+
+body {
+    overflow-x: hidden;
+    font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        'Segoe UI',
+        Roboto;
+    background-color: theme('colors.background');
+    color: theme('colors.white');
+}
+
+button,
+a {
+    transition: all 0.3s;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #60606010;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: theme('colors.secondary-500');
+}

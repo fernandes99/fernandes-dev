@@ -1,0 +1,10 @@
+node_modules
+yarn.lock
+package-lock.json
+public
+.github
+_content_cache
+docs
+coverage
+README.md
+tailwind.config.ts
