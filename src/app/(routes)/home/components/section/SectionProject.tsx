@@ -55,7 +55,20 @@ export default function SectionProject() {
                                     {project.description}
                                 </p>
                             </Card.Body>
-                            <Card.Footer>Teste</Card.Footer>
+                            <Card.Footer>
+                                <ul className='flex items-center gap-2'>
+                                    {project.tools.map((tool) => (
+                                        <a
+                                            key={tool.slug}
+                                            className='cursor-pointer text-2xl text-secondary-500 hover:text-secondary-200'
+                                            title={tool.name}
+                                            href={tool.url}
+                                        >
+                                            {tool.icon}
+                                        </a>
+                                    ))}
+                                </ul>
+                            </Card.Footer>
                         </Card.Root>
                     </li>
                 ))}

@@ -2,7 +2,7 @@ import React, { ComponentProps, ReactNode } from 'react';
 import { tv, VariantProps } from 'tailwind-variants';
 
 const styles = tv({
-    base: 'flex w-fit items-center justify-center gap-2 rounded-full bg-primary-800 font-medium text-primary-200',
+    base: 'hover:bg-primary-800-hover flex w-fit cursor-default items-center justify-center gap-2 rounded-full bg-primary-800 font-medium text-primary-200 transition-all',
     variants: {
         size: {
             small: 'px-4 py-1 text-sm',

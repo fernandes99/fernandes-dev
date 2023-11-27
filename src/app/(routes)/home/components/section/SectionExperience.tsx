@@ -63,7 +63,10 @@ export default function SectionExperience() {
             <div className='absolute flex w-[1400px]'>
                 <ul className='no-scrollbar flex overflow-x-auto' onScroll={handleExperienceScroll}>
                     {experienceList.map((experience) => (
-                        <li className='min-w-[500px]' key={experience.id}>
+                        <li
+                            className='min-w-[500px] transition-all hover:opacity-90'
+                            key={experience.id}
+                        >
                             <span className='text-xs font-medium text-secondary-500'>
                                 {experience.time_interval}
                             </span>
