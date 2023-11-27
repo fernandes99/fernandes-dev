@@ -7,7 +7,7 @@ import Image from 'next/image';
 
 export default function SectionPrimary() {
     return (
-        <section className='container mx-auto grid max-w-[1020px] grid-cols-2 gap-16'>
+        <section className='container mx-auto grid max-w-[1020px] grid-cols-2 gap-16 pb-24 pt-32'>
             <div className='py-32'>
                 <div className='mb-8'>
                     <p className='mb-2 text-sm font-light text-secondary-200'>Olá, meu nome é</p>
@@ -48,8 +48,12 @@ export default function SectionPrimary() {
             </div>
 
             {/* after:bg-[radial-gradient(#191E2400_0%,#191E24_70%,#191E24_100%)] */}
-            <div className='relative after:absolute after:left-0 after:top-0 after:h-full after:w-full'>
-                <Image src={ProfileImagePrincipal} alt='Imagem de perfil de Roberto' />
+            <div className='absolute left-[40%] top-[-10%] -z-10 overflow-hidden after:absolute after:left-0 after:top-0 after:h-full after:w-full after:bg-[radial-gradient(#191E2400_0%,#191E24_60%,#191E24_100%)]'>
+                <Image
+                    className='translate-y-[80px] opacity-30 grayscale'
+                    src={ProfileImagePrincipal}
+                    alt='Imagem de perfil de Roberto'
+                />
             </div>
         </section>
     );
