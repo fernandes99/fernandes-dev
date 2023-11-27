@@ -1,9 +1,34 @@
+'use client';
+
 import ProfileImageAbout from '@/assets/img/about_image_profile_20231126.png';
 import Image from 'next/image';
+import { useEffect, useRef, useState } from 'react';
 
 export default function SectionAbout() {
+    const sectionRef = useRef<HTMLDivElement>(null);
+    const [preSectionOnView, setPreSectionOnView] = useState(false);
+
+    const handleScroll = () => {
+        const sectionElement = sectionRef.current!;
+        const { top, bottom } = sectionElement.getBoundingClientRect();
+
+        setPreSectionOnView(bottom >= 0 && window.innerHeight - top >= 300);
+    };
+
+    useEffect(() => {
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
+
     return (
-        <section className='container mx-auto grid max-w-[1020px] grid-cols-2 gap-16 py-32'>
+        <section
+            className={`container mx-auto grid max-w-[1020px] grid-cols-2 gap-16 py-32 transition-all duration-500 ${
+                preSectionOnView
+                    ? 'translate-y-0 opacity-100 blur-none'
+                    : 'translate-y-12 opacity-0 blur-sm'
+            }`}
+            ref={sectionRef}
+        >
             <div>
                 <h3 className='mb-6 text-3xl font-semibold'>Sobre</h3>
                 <p className='mb-6 font-light text-secondary-200'>

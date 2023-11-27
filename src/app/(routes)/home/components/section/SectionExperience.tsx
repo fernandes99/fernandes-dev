@@ -2,10 +2,12 @@
 
 import { Tag } from '@/components/Tag';
 import { experienceList } from '@/constants/experiences';
-import { UIEvent, useState } from 'react';
+import { UIEvent, useEffect, useRef, useState } from 'react';
 import { FiArrowUpRight, FiArrowRight, FiArrowLeft } from 'react-icons/fi';
 
 export default function SectionExperience() {
+    const sectionRef = useRef<HTMLDivElement>(null);
+    const [preSectionOnView, setPreSectionOnView] = useState(false);
     const [showScrollShadow, setShowScrollShadow] = useState({
         left: true,
         right: false
@@ -25,8 +27,27 @@ export default function SectionExperience() {
         });
     };
 
+    const handleScroll = () => {
+        const sectionElement = sectionRef.current!;
+        const { top, bottom } = sectionElement.getBoundingClientRect();
+
+        setPreSectionOnView(bottom >= 0 && window.innerHeight - top >= 300);
+    };
+
+    useEffect(() => {
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
+
     return (
-        <section className='container relative mx-auto min-h-[660px] max-w-[1020px] py-32'>
+        <section
+            className={`container relative mx-auto min-h-[660px] max-w-[1020px] py-32 duration-500 ${
+                preSectionOnView
+                    ? 'translate-y-0 opacity-100 blur-none'
+                    : 'translate-y-12 opacity-0 blur-sm'
+            }`}
+            ref={sectionRef}
+        >
             <div className='mb-6 flex items-center justify-between'>
                 <h3 className='text-3xl font-semibold'>Experiência</h3>
                 <div className='flex items-center gap-3'>
@@ -75,14 +96,14 @@ export default function SectionExperience() {
                 </ul>
 
                 <div
-                    className={`pointer-events-none absolute left-0 top-0 h-full w-64 bg-[linear-gradient(270deg,#191E2400_0%,#191E24_100%)] transition-all opacity-${
-                        showScrollShadow.left ? '0' : '100'
+                    className={`pointer-events-none absolute left-0 top-0 h-full w-64 bg-[linear-gradient(270deg,#191E2400_0%,#191E24_100%)] transition-all ${
+                        showScrollShadow.left ? 'opacity-0' : 'opacity-100'
                     }`}
                 />
 
                 <div
-                    className={`pointer-events-none absolute right-0 top-0 h-full w-64 bg-[linear-gradient(270deg,#191E24_0%,#191E2400_100%)] transition-all opacity-${
-                        showScrollShadow.right ? '0' : '100'
+                    className={`pointer-events-none absolute right-0 top-0 h-full w-64 bg-[linear-gradient(270deg,#191E24_0%,#191E2400_100%)] transition-all ${
+                        showScrollShadow.right ? 'opacity-0' : 'opacity-100'
                     }`}
                 />
             </div>

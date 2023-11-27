@@ -1,10 +1,35 @@
+'use client';
+
 import { Card } from '@/components/Card';
 import { projectList } from '@/constants/projects';
+import { useEffect, useRef, useState } from 'react';
 import { FiArrowRight, FiArrowLeft } from 'react-icons/fi';
 
 export default function SectionProject() {
+    const sectionRef = useRef<HTMLDivElement>(null);
+    const [preSectionOnView, setPreSectionOnView] = useState(false);
+
+    const handleScroll = () => {
+        const sectionElement = sectionRef.current!;
+        const { top, bottom } = sectionElement.getBoundingClientRect();
+
+        setPreSectionOnView(bottom >= 0 && window.innerHeight - top >= 300);
+    };
+
+    useEffect(() => {
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
+
     return (
-        <section className='container mx-auto max-w-[1020px] py-32'>
+        <section
+            className={`container mx-auto max-w-[1020px] py-32 duration-500 ${
+                preSectionOnView
+                    ? 'translate-y-0 opacity-100 blur-none'
+                    : 'translate-y-12 opacity-0 blur-sm'
+            }`}
+            ref={sectionRef}
+        >
             <div className='mb-6 flex justify-between'>
                 <h3 className='text-3xl font-semibold'>Projetos</h3>
                 <div className='flex items-center gap-3'>
