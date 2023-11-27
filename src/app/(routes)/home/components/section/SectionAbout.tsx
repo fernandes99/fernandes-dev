@@ -1,4 +1,4 @@
-import ProfileImageAbout from '@/assets/img/about-image-profile-20231126.png';
+import ProfileImageAbout from '@/assets/img/about_image_profile_20231126.png';
 import Image from 'next/image';
 
 export default function SectionAbout() {

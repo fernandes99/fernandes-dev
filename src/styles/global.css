@@ -28,6 +28,7 @@ body {
 }
 
 button,
+i,
 a {
     transition: all 0.3s;
 }
