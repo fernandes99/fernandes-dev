@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import '../styles/global.css';
@@ -13,6 +14,15 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
     return (
         <html lang='pt-BR'>
+            <Head>
+                <link rel='icon' href='/favicon/favicon.ico' sizes='any' />
+                <link
+                    rel='apple-touch-icon'
+                    href='/favicon/apple-touch-icon.png'
+                    type='image/png'
+                />
+            </Head>
+
             <body className={inter.className}>
                 <Header />
                 {children}

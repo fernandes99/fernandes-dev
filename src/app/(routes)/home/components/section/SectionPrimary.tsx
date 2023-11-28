@@ -1,3 +1,5 @@
+'use client';
+
 import { Button } from '@/components/Button';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { RxExternalLink } from 'react-icons/rx';
@@ -22,7 +24,12 @@ export default function SectionPrimary() {
                         desenvolver soluções de alta qualidade.
                     </p>
                     <div className='flex gap-2'>
-                        <Button className='mr-2'>
+                        <Button
+                            className='mr-2'
+                            onClick={() =>
+                                window.open('/docs/curriculo_roberto_fernandes_2023.pdf', '_blank')
+                            }
+                        >
                             Ver currículo <RxExternalLink />
                         </Button>
                         <Button variant='secondary'>Ver projetos</Button>
