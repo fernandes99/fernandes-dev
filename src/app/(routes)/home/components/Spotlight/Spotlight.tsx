@@ -24,7 +24,7 @@ export function Spotlight() {
                 width: `${size}px`,
                 height: `${size}px`
             }}
-            className={`fixed bg-[radial-gradient(#7640F5_0%,#7640F500_70%)] opacity-5`}
+            className={`pointer-events-none fixed bg-[radial-gradient(#0063d9_0%,#0063d900_70%)] opacity-5`}
         />
     );
 }

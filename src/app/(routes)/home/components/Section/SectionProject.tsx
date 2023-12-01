@@ -3,7 +3,6 @@
 import { Card } from '@/components/Card';
 import { projectList } from '@/constants/projects';
 import { useEffect, useRef, useState } from 'react';
-import { FiArrowRight, FiArrowLeft } from 'react-icons/fi';
 
 export default function SectionProject() {
     const sectionRef = useRef<HTMLDivElement>(null);
@@ -29,18 +28,9 @@ export default function SectionProject() {
                     : 'translate-y-12 opacity-0 blur-sm'
             }`}
             ref={sectionRef}
+            id='projetos'
         >
-            <div className='mb-6 flex justify-between'>
-                <h3 className='text-3xl font-semibold'>Projetos</h3>
-                <div className='flex items-center gap-3'>
-                    <i className='flex h-10 w-10 cursor-pointer items-center justify-center rounded-full bg-secondary-800 text-2xl text-secondary-200 hover:bg-secondary-800-hover'>
-                        <FiArrowLeft />
-                    </i>
-                    <i className='flex h-10 w-10 cursor-pointer items-center justify-center rounded-full bg-secondary-800 text-2xl text-secondary-200 hover:bg-secondary-800-hover'>
-                        <FiArrowRight />
-                    </i>
-                </div>
-            </div>
+            <h3 className='mb-6 text-3xl font-semibold'>Projetos</h3>
 
             <ul className='grid grid-cols-3 gap-4'>
                 {projectList.map((project) => (

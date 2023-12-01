@@ -7,6 +7,7 @@ import { FiArrowUpRight, FiArrowRight, FiArrowLeft } from 'react-icons/fi';
 
 export default function SectionExperience() {
     const sectionRef = useRef<HTMLDivElement>(null);
+    const experienceListRef = useRef<HTMLUListElement>(null);
     const [preSectionOnView, setPreSectionOnView] = useState(false);
     const [showScrollShadow, setShowScrollShadow] = useState({
         left: true,
@@ -34,6 +35,13 @@ export default function SectionExperience() {
         setPreSectionOnView(bottom >= 0 && window.innerHeight - top >= 300);
     };
 
+    const scrollExperienceList = (side: 'left' | 'right') => {
+        const deltaScroll = side === 'left' ? -500 : 500;
+        const currentScroll = experienceListRef.current.scrollLeft;
+
+        experienceListRef.current.scrollTo(currentScroll + deltaScroll, 0);
+    };
+
     useEffect(() => {
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
@@ -51,17 +59,27 @@ export default function SectionExperience() {
             <div className='mb-6 flex items-center justify-between'>
                 <h3 className='text-3xl font-semibold'>Experiência</h3>
                 <div className='flex items-center gap-3'>
-                    <i className='flex h-10 w-10 cursor-pointer items-center justify-center rounded-full bg-secondary-800 text-2xl text-secondary-200 hover:bg-secondary-800-hover'>
+                    <i
+                        onClick={() => scrollExperienceList('left')}
+                        className='flex h-10 w-10 cursor-pointer items-center justify-center rounded-full bg-secondary-800 text-2xl text-secondary-200 hover:bg-secondary-800-hover'
+                    >
                         <FiArrowLeft />
                     </i>
-                    <i className='flex h-10 w-10 cursor-pointer items-center justify-center rounded-full bg-secondary-800 text-2xl text-secondary-200 hover:bg-secondary-800-hover'>
+                    <i
+                        onClick={() => scrollExperienceList('right')}
+                        className='flex h-10 w-10 cursor-pointer items-center justify-center rounded-full bg-secondary-800 text-2xl text-secondary-200 hover:bg-secondary-800-hover'
+                    >
                         <FiArrowRight />
                     </i>
                 </div>
             </div>
 
             <div className='absolute flex w-[1400px]'>
-                <ul className='no-scrollbar flex overflow-x-auto' onScroll={handleExperienceScroll}>
+                <ul
+                    className='no-scrollbar flex overflow-x-auto scroll-smooth'
+                    onScroll={handleExperienceScroll}
+                    ref={experienceListRef}
+                >
                     {experienceList.map((experience) => (
                         <li
                             className='min-w-[500px] transition-all hover:opacity-90'

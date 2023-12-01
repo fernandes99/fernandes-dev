@@ -1,7 +1,7 @@
 'use client';
 
 import { Button } from '@/components/Button';
-import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaWhatsapp } from 'react-icons/fa';
 import { RxExternalLink } from 'react-icons/rx';
 
 import ProfileImagePrincipal from '@/assets/img/profile_image_01_20220626.png';
@@ -32,7 +32,16 @@ export default function SectionPrimary() {
                         >
                             Ver currículo <RxExternalLink />
                         </Button>
-                        <Button variant='secondary'>Ver projetos</Button>
+                        <Button
+                            variant='secondary'
+                            onClick={() =>
+                                document
+                                    .querySelector('#projetos')
+                                    ?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+                            }
+                        >
+                            Ver projetos
+                        </Button>
                     </div>
                 </div>
 
@@ -40,6 +49,7 @@ export default function SectionPrimary() {
                     <a
                         href='https://github.com/fernandes99/'
                         title='Acessar Github de Roberto'
+                        target='_blank'
                         className='hover:text-secondary-200'
                     >
                         <FaGithub />
@@ -47,14 +57,22 @@ export default function SectionPrimary() {
                     <a
                         href='https://www.linkedin.com/in/roberto-brito-fernandes/'
                         title='Acessar Linkedin de Roberto'
+                        target='_blank'
                         className='hover:text-secondary-200'
                     >
                         <FaLinkedin />
                     </a>
+                    <a
+                        href='https://web.whatsapp.com/send?phone=5583987355247'
+                        title='Acessar Linkedin de Roberto'
+                        target='_blank'
+                        className='hover:text-secondary-200'
+                    >
+                        <FaWhatsapp />
+                    </a>
                 </div>
             </div>
 
-            {/* after:bg-[radial-gradient(#191E2400_0%,#191E24_70%,#191E24_100%)] */}
             <div className='absolute left-[40%] top-[-10%] -z-10 overflow-hidden after:absolute after:left-0 after:top-0 after:h-full after:w-full after:bg-[radial-gradient(#191E2400_0%,#191E24_60%,#191E24_100%)]'>
                 <Image
                     className='translate-y-[80px] opacity-30 grayscale'
