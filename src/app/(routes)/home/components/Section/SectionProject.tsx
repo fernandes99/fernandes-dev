@@ -1,8 +1,9 @@
 'use client';
 
+import { useEffect, useRef, useState } from 'react';
 import { Card } from '@/components/Card';
 import { projectList } from '@/constants/projects';
-import { useEffect, useRef, useState } from 'react';
+import { FiExternalLink } from 'react-icons/fi';
 
 export default function SectionProject() {
     const sectionRef = useRef<HTMLDivElement>(null);
@@ -38,7 +39,15 @@ export default function SectionProject() {
                         <Card.Root>
                             <Card.Image pathImage={project.path_image} />
                             <Card.Head>
-                                <h5 className='text-lg font-semibold'>{project.title}</h5>
+                                <a
+                                    href={project.github_link}
+                                    title={`Acessar o projeto ${project.title}`}
+                                    target='_blank'
+                                    className='flex w-fit items-center gap-2 hover:opacity-70'
+                                >
+                                    <h5 className='text-lg font-semibold'>{project.title}</h5>
+                                    <FiExternalLink className='mb-[3px] text-secondary-200' />
+                                </a>
                             </Card.Head>
                             <Card.Body>
                                 <p className='font-light text-secondary-200'>
