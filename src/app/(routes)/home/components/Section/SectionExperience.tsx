@@ -49,7 +49,7 @@ export default function SectionExperience() {
 
     return (
         <section
-            className={`container relative mx-auto min-h-[660px] max-w-[1020px] py-32 duration-500 ${
+            className={`container relative mx-auto min-h-[660px] max-w-[1020px] py-12 duration-500 xl:py-32 ${
                 preSectionOnView
                     ? 'translate-y-0 opacity-100 blur-none'
                     : 'translate-y-12 opacity-0 blur-sm'
@@ -74,7 +74,7 @@ export default function SectionExperience() {
                 </div>
             </div>
 
-            <div className='absolute flex w-[1400px]'>
+            <div className='relative flex w-full xl:absolute xl:w-[1400px]'>
                 <ul
                     className='no-scrollbar flex overflow-x-auto scroll-smooth'
                     onScroll={handleExperienceScroll}
@@ -82,7 +82,7 @@ export default function SectionExperience() {
                 >
                     {experienceList.map((experience) => (
                         <li
-                            className='min-w-[500px] transition-all hover:opacity-90'
+                            className='min-w-[100%] transition-all hover:opacity-90 sm:min-w-[500px]'
                             key={experience.id}
                         >
                             <span className='text-xs font-medium text-secondary-500'>
@@ -100,7 +100,7 @@ export default function SectionExperience() {
                                     <FiArrowUpRight />
                                 </a>
                                 <p className='mb-4 text-secondary-200'>{experience.office}</p>
-                                <p className='mb-4 font-light text-secondary-200'>
+                                <p className='mb-4 line-clamp-[8] font-light text-secondary-200'>
                                     {experience.description}
                                 </p>
 
@@ -117,13 +117,13 @@ export default function SectionExperience() {
                 </ul>
 
                 <div
-                    className={`pointer-events-none absolute left-0 top-0 h-full w-64 bg-[linear-gradient(270deg,#191E2400_0%,#191E24_100%)] transition-all ${
+                    className={`pointer-events-none absolute left-0 top-0 h-full w-0 bg-[linear-gradient(270deg,#191E2400_0%,#191E24_100%)] transition-all sm:w-64 ${
                         showScrollShadow.left ? 'opacity-0' : 'opacity-100'
                     }`}
                 />
 
                 <div
-                    className={`pointer-events-none absolute right-0 top-0 h-full w-64 bg-[linear-gradient(270deg,#191E24_0%,#191E2400_100%)] transition-all ${
+                    className={`pointer-events-none absolute right-0 top-0 h-full w-0 bg-[linear-gradient(270deg,#191E24_0%,#191E2400_100%)] transition-all sm:w-64 ${
                         showScrollShadow.right ? 'opacity-0' : 'opacity-100'
                     }`}
                 />

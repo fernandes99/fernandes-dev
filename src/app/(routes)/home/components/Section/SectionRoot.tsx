@@ -5,5 +5,5 @@ interface SectionRootProps {
 }
 
 export default function SectionRoot({ children }: SectionRootProps) {
-    return <div>{children}</div>;
+    return <div className='px-6 xl:px-0'>{children}</div>;
 }

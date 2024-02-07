@@ -9,8 +9,8 @@ import Image from 'next/image';
 
 export default function SectionPrimary() {
     return (
-        <section className='container mx-auto grid max-w-[1020px] grid-cols-2 gap-16 pb-24 pt-32'>
-            <div className='py-32'>
+        <section className='container mx-auto grid max-w-[1020px] grid-cols-1 gap-16 pb-12 pt-12 xl:grid-cols-2 xl:pb-24 xl:pt-32'>
+            <div className='py-24'>
                 <div className='mb-8'>
                     <p className='mb-2 text-sm font-light text-secondary-200'>Olá, meu nome é</p>
                     <h1 className='mb-2 text-5xl font-semibold'>

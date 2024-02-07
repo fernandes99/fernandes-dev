@@ -24,7 +24,7 @@ export default function SectionProject() {
 
     return (
         <section
-            className={`container mx-auto max-w-[1020px] py-32 duration-500 ${
+            className={`container mx-auto max-w-[1020px] py-12 duration-500 xl:py-32 ${
                 preSectionOnView
                     ? 'translate-y-0 opacity-100 blur-none'
                     : 'translate-y-12 opacity-0 blur-sm'
@@ -34,7 +34,7 @@ export default function SectionProject() {
         >
             <h3 className='mb-6 text-3xl font-semibold'>Projetos</h3>
 
-            <ul className='grid grid-cols-3 gap-4'>
+            <ul className='grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3'>
                 {projectList.map((project) => (
                     <li key={project.id}>
                         <Card.Root className='h-full'>
@@ -47,7 +47,7 @@ export default function SectionProject() {
                                         target='_blank'
                                         className='flex w-fit items-center gap-2 hover:opacity-70'
                                     >
-                                        <h5 className='text-lg font-semibold'>{project.title}</h5>
+                                        <p className='text-lg font-semibold'>{project.title}</p>
                                         <FaGithub className='text-secondary-200' />
                                     </a>
                                     <a
@@ -71,14 +71,14 @@ export default function SectionProject() {
                             <Card.Footer className='mt-auto'>
                                 <ul className='flex items-center gap-2'>
                                     {project.tools.map((tool) => (
-                                        <a
+                                        <li
                                             key={tool.slug}
                                             className='cursor-pointer text-2xl text-secondary-500 hover:text-secondary-200'
-                                            title={tool.name}
-                                            href={tool.url}
                                         >
-                                            <li>{tool.icon}</li>
-                                        </a>
+                                            <a title={tool.name} href={tool.url}>
+                                                {tool.icon}
+                                            </a>
+                                        </li>
                                     ))}
                                 </ul>
                             </Card.Footer>

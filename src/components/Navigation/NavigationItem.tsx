@@ -9,8 +9,10 @@ interface NavigationItemProps extends ComponentProps<'li'> {
 
 export default function NavigationItem({ title, children, href, ...rest }: NavigationItemProps) {
     return (
-        <Link href={href} title={title} key={title}>
-            <li {...rest}>{children}</li>
-        </Link>
+        <li {...rest}>
+            <Link href={href} title={title} key={title}>
+                {children}
+            </Link>
+        </li>
     );
 }

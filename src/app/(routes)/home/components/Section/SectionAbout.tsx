@@ -22,7 +22,7 @@ export default function SectionAbout() {
 
     return (
         <section
-            className={`container mx-auto grid max-w-[1020px] grid-cols-2 gap-16 py-32 transition-all duration-500 ${
+            className={`container mx-auto grid max-w-[1020px] grid-cols-1 gap-16 py-12 transition-all duration-500 xl:grid-cols-2 xl:py-32 ${
                 preSectionOnView
                     ? 'translate-y-0 opacity-100 blur-none'
                     : 'translate-y-12 opacity-0 blur-sm'
