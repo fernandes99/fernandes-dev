@@ -96,7 +96,7 @@ export default function SectionExperience() {
                                     href={experience.link_company}
                                     className='flex w-min items-center gap-1 hover:text-secondary-200'
                                 >
-                                    <p className='font-medium'>MadeiraMadeira</p>
+                                    <p className='font-medium'>{experience.title}</p>
                                     <FiArrowUpRight />
                                 </a>
                                 <p className='mb-4 text-secondary-200'>{experience.office}</p>

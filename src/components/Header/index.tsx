@@ -7,7 +7,12 @@ export default function Header() {
             <Navigation.Root>
                 <Navigation.List>
                     {navData.list.map((item) => (
-                        <Navigation.Item key={item.title} {...item}>
+                        <Navigation.Item
+                            key={item.title}
+                            className='rounded-md px-3 py-1 hover:bg-black/20'
+                            {...item}
+                            href={item.href}
+                        >
                             {item.title}
                         </Navigation.Item>
                     ))}

@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from 'react';
 import { Card } from '@/components/Card';
 import { projectList } from '@/constants/projects';
 import { FiExternalLink } from 'react-icons/fi';
+import { FaGithub } from 'react-icons/fa';
 
 export default function SectionProject() {
     const sectionRef = useRef<HTMLDivElement>(null);
@@ -36,25 +37,38 @@ export default function SectionProject() {
             <ul className='grid grid-cols-3 gap-4'>
                 {projectList.map((project) => (
                     <li key={project.id}>
-                        <Card.Root>
+                        <Card.Root className='h-full'>
                             <Card.Image pathImage={project.path_image} />
                             <Card.Head>
-                                <a
-                                    href={project.github_link}
-                                    title={`Acessar o projeto ${project.title}`}
-                                    target='_blank'
-                                    className='flex w-fit items-center gap-2 hover:opacity-70'
-                                >
-                                    <h5 className='text-lg font-semibold'>{project.title}</h5>
-                                    <FiExternalLink className='mb-[3px] text-secondary-200' />
-                                </a>
+                                <div className='flex flex-wrap justify-between gap-4'>
+                                    <a
+                                        href={project.github_link}
+                                        title={`Acessar repositório de ${project.title}`}
+                                        target='_blank'
+                                        className='flex w-fit items-center gap-2 hover:opacity-70'
+                                    >
+                                        <h5 className='text-lg font-semibold'>{project.title}</h5>
+                                        <FaGithub className='text-secondary-200' />
+                                    </a>
+                                    <a
+                                        href={project.github_link}
+                                        title={`Acessar projeto de ${project.title}`}
+                                        target='_blank'
+                                        className='flex w-fit items-center gap-1 hover:opacity-70'
+                                    >
+                                        <p className='text-xs font-medium text-secondary-200'>
+                                            Acessar
+                                        </p>
+                                        <FiExternalLink className='text-secondary-200' size={14} />
+                                    </a>
+                                </div>
                             </Card.Head>
                             <Card.Body>
-                                <p className='font-light text-secondary-200'>
+                                <p className='custom-ellipsis line-clamp-5 font-light text-secondary-200'>
                                     {project.description}
                                 </p>
                             </Card.Body>
-                            <Card.Footer>
+                            <Card.Footer className='mt-auto'>
                                 <ul className='flex items-center gap-2'>
                                     {project.tools.map((tool) => (
                                         <a
@@ -63,7 +77,7 @@ export default function SectionProject() {
                                             title={tool.name}
                                             href={tool.url}
                                         >
-                                            {tool.icon}
+                                            <li>{tool.icon}</li>
                                         </a>
                                     ))}
                                 </ul>

@@ -2,15 +2,15 @@ export const navData = {
     list: [
         {
             title: 'Contato',
-            href: '#'
+            href: 'https://www.linkedin.com/in/roberto-brito-fernandes/'
         },
         {
-            title: 'Linkedin',
-            href: '#'
+            title: 'LinkedIn',
+            href: 'https://www.linkedin.com/in/roberto-brito-fernandes/'
         },
         {
             title: 'Github',
-            href: '#'
+            href: 'https://github.com/fernandes99/'
         }
     ]
 };

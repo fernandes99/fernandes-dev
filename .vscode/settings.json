@@ -4,7 +4,7 @@
     "editor.formatOnSave": true,
     "prettier.singleQuote": true,
     "editor.codeActionsOnSave": {
-        "source.fixAll.eslint": true
+        "source.fixAll.eslint": "explicit"
     },
     "eslint.codeAction.showDocumentation": {
         "enable": true

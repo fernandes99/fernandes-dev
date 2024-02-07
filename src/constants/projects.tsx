@@ -10,8 +10,11 @@ import {
     BiLogoJavascript,
     BiLogoReact,
     BiLogoVuejs,
-    BiLogoFigma
+    BiLogoNodejs,
+    BiLogoTailwindCss,
+    BiLogoCss3
 } from 'react-icons/bi';
+import { SiStyledcomponents } from 'react-icons/si';
 import { TbBrandNextjs } from 'react-icons/tb';
 import { RxFigmaLogo } from 'react-icons/rx';
 
@@ -21,6 +24,12 @@ const tool = {
         name: 'JS Vanilla',
         url: 'https://vanilla-js.com/',
         icon: <BiLogoJavascript />
+    },
+    node_js: {
+        slug: 'node-js',
+        name: 'Node JS',
+        url: 'https://nodejs.org/en',
+        icon: <BiLogoNodejs />
     },
     typescript: {
         slug: 'typescript',
@@ -51,6 +60,24 @@ const tool = {
         name: 'Figma',
         url: 'https://www.figma.com/',
         icon: <RxFigmaLogo />
+    },
+    styled_component: {
+        slug: 'styled-component',
+        name: 'Styled Component',
+        url: 'https://styled-components.com/',
+        icon: <SiStyledcomponents />
+    },
+    tailwind: {
+        slug: 'tailwind',
+        name: 'Tailwind CSS',
+        url: 'https://tailwindcss.com/',
+        icon: <BiLogoTailwindCss />
+    },
+    css: {
+        slug: 'css',
+        name: 'CSS3',
+        url: 'https://developer.mozilla.org/pt-BR/docs/Web/CSS/',
+        icon: <BiLogoCss3 />
     }
 };
 
@@ -59,54 +86,60 @@ export const projectList = [
         id: '1',
         title: 'Pokeclash',
         description:
-            'Um jogo pokemon. O principal propósito desse projeto, era apriomorar minhas habilidades de tipagem usando typescript. Usando a API chamda pokeApi, foi uma ótima oportunidade para tipar os...',
+            'Um jogo pokemon. O principal propósito desse projeto, era apriomorar minhas habilidades de tipagem usando typescript. Usando a API do PokeApi, foi uma ótima oportunidade para tipar os...',
         tools: [tool.react, tool.typescript],
         path_image: PokeClashImage,
-        github_link: 'https://github.com/fernandes99/batatinha-frita-123'
+        github_link: 'https://github.com/fernandes99/pokeclash',
+        project_link: 'https://pokeclash.netlify.app/'
     },
     {
         id: '2',
         title: 'Batatinha Frita 123',
         description:
-            'Um jogo em JS Puro, baseado em um dos jogos da série Round 6. Seu objetivo era de aprimorar minhas skills utilizando orientação a objeto com JS puro, sem seguir passo a passo de curso algum.',
-        tools: [tool.js_vanilla, tool.react, tool.vuejs, tool.typescript, tool.nextjs],
+            'Um jogo em JS Puro, baseado em um dos jogos da série Round 6. Seu objetivo era de aprimorar minhas skills utilizando orientação a objeto com JS puro.',
+        tools: [tool.js_vanilla, tool.css, tool.figma],
         path_image: BatatinhaFrita123Image,
-        github_link: 'https://github.com/fernandes99/pokeclash'
+        github_link: 'https://github.com/fernandes99/batatinha-frita-123',
+        project_link: 'https://fernandes99.github.io/batatinha-frita-123/'
     },
     {
         id: '3',
-        title: 'Batatinha Frita 123',
+        title: 'Coupverse',
         description:
-            'Um jogo em JS Puro, baseado em um dos jogos da série Round 6. Seu objetivo era de aprimorar minhas skills utilizando orientação a objeto com JS puro, sem seguir passo a passo de curso algum.',
-        tools: [tool.js_vanilla, tool.figma],
+            'Um projeto front e backend em mono repo, utilizando websocket. O jogo simula um famoso jogo de cartas chamado Coup. Feito completo do protótipo ao código.',
+        tools: [tool.figma, tool.node_js, tool.typescript, tool.react],
         path_image: CoupverseImage,
-        github_link: 'https://github.com/fernandes99/batatinha-frita-123'
+        github_link: 'https://github.com/fernandes99/coupverse',
+        project_link: 'https://coupverse.vercel.app/'
     },
     {
         id: '4',
-        title: 'Batatinha Frita 123',
+        title: 'Pokegoal',
         description:
-            'Um jogo em JS Puro, baseado em um dos jogos da série Round 6. Seu objetivo era de aprimorar minhas skills utilizando orientação a objeto com JS puro, sem seguir passo a passo de curso algum.',
-        tools: [tool.js_vanilla, tool.figma],
+            'Um jogo clássico de pokemon, onde há sistemas de captura e pokedex desses pequenos bichinhos. Feito completo do protótipo ao código.',
+        tools: [tool.react, tool.styled_component, tool.typescript, tool.figma],
         path_image: PokegoalImage,
-        github_link: 'https://github.com/fernandes99/batatinha-frita-123'
+        github_link: 'https://github.com/fernandes99/pokegoal',
+        project_link: 'https://pokegoal.netlify.com/'
     },
     {
         id: '4',
-        title: 'Batatinha Frita 123',
+        title: 'Clickvet',
         description:
-            'Um jogo em JS Puro, baseado em um dos jogos da série Round 6. Seu objetivo era de aprimorar minhas skills utilizando orientação a objeto com JS puro, sem seguir passo a passo de curso algum.',
-        tools: [tool.js_vanilla, tool.figma],
+            'Um sistema simples, onde busca, de acordo com o seu CEP, veterinários próximos com base em dados de uma planilha, utilizando o webhook do google sheets.',
+        tools: [tool.react, tool.css],
         path_image: ClickvetImage,
-        github_link: 'https://github.com/fernandes99/batatinha-frita-123'
+        github_link: 'https://github.com/fernandes99/clickvet-react',
+        project_link: 'https://clickvet.netlify.com/'
     },
     {
         id: '4',
-        title: 'Batatinha Frita 123',
+        title: 'Bushfarm',
         description:
-            'Um jogo em JS Puro, baseado em um dos jogos da série Round 6. Seu objetivo era de aprimorar minhas skills utilizando orientação a objeto com JS puro, sem seguir passo a passo de curso algum.',
-        tools: [tool.js_vanilla, tool.figma],
+            'Um jogo de fazenda simples, onde você pode comprar e cultivar plantações. Imitando a ideia de uma mineração de cripto.',
+        tools: [tool.react, tool.typescript, tool.figma],
         path_image: BushFarmImage,
-        github_link: 'https://github.com/fernandes99/batatinha-frita-123'
+        github_link: 'https://github.com/fernandes99/bushfarm',
+        project_link: 'https://bushfarm.netlify.com/'
     }
 ];
