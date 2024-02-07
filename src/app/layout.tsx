@@ -7,8 +7,25 @@ import Header from '@/components/Header';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-    title: 'Portfólio Roberto Fernandes',
-    description: 'Portfólio Roberto Fernandes'
+    title: 'Roberto Fernandes - Desenvolvedor Front End',
+    description:
+        'Desenvolvedor Front End com experiência em React, Vue, NextJS, JavaScript, TypeScript, Styled Components, Tailwind, consumo de APIs REST, etc. Apaixonado por tecnologia.',
+    openGraph: {
+        title: 'Roberto Fernandes - Desenvolvedor Front End',
+        description:
+            'Desenvolvedor Front End com experiência em React, Vue, NextJS, JavaScript, TypeScript, Styled Components, Tailwind, consumo de APIs REST, etc. Apaixonado por tecnologia.',
+        type: 'website',
+        url: 'https://www.robertofernandes.dev/',
+        images: 'https://www.robertofernandes.dev/imgs/website-thumb.png'
+    },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'Roberto Fernandes - Desenvolvedor Front End',
+        site: 'https://www.robertofernandes.dev/',
+        description:
+            'Desenvolvedor Front End com experiência em React, Vue, NextJS, JavaScript, TypeScript, Styled Components, Tailwind, consumo de APIs REST, etc. Apaixonado por tecnologia.',
+        images: 'https://www.robertofernandes.dev/imgs/website-thumb.png'
+    }
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
