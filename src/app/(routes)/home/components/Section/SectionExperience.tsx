@@ -74,7 +74,7 @@ export default function SectionExperience() {
                 </div>
             </div>
 
-            <div className='relative flex w-full xl:absolute xl:w-[1400px]'>
+            <div className='relative flex w-full xl:absolute xl:w-[120%]'>
                 <ul
                     className='no-scrollbar flex overflow-x-auto scroll-smooth'
                     onScroll={handleExperienceScroll}
