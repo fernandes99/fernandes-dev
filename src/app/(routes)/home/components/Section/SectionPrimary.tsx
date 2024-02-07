@@ -19,11 +19,11 @@ export default function SectionPrimary() {
                         Fernandes
                     </h1>
                     <h2 className='mb-4 font-semibold'>Desenvolvedor Front-End</h2>
-                    <p className='mb-6 font-light text-secondary-200'>
+                    <p className='mb-6 font-light text-secondary-200 sm:w-1/2 xl:w-full'>
                         Procurando aprender novas tecnologias e aprimorar minhas habilidades para
                         desenvolver soluções de alta qualidade.
                     </p>
-                    <div className='flex gap-2'>
+                    <div className='flex flex-wrap gap-2'>
                         <Button
                             className='mr-2'
                             onClick={() =>
@@ -73,11 +73,13 @@ export default function SectionPrimary() {
                 </div>
             </div>
 
-            <div className='md:w-unset absolute left-[20%] top-[5%] -z-10 w-full overflow-hidden after:absolute after:left-0 after:top-0 after:h-full after:w-full after:bg-[radial-gradient(#191E2400_0%,#191E24_60%,#191E24_100%)] md:left-[40%] md:top-[-10%]'>
+            <div className='md:w-unset absolute left-[20%] top-0 -z-10 w-full overflow-hidden after:absolute after:left-0 after:top-0 after:h-full after:w-full after:bg-[radial-gradient(#191E2400_0%,#191E24_60%,#191E24_100%)] md:top-[-5%] lg:top-[-8%] xl:left-[40%] xl:top-[-10%]'>
                 <Image
                     className='translate-y-[0px] opacity-30 grayscale md:translate-y-[80px]'
                     src={ProfileImagePrincipal}
                     alt='Imagem de perfil de Roberto'
+                    priority
+                    quality={50}
                 />
             </div>
         </section>

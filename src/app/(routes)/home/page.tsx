@@ -3,7 +3,7 @@ import { Spotlight } from './components/Spotlight';
 
 export default function HomePage() {
     return (
-        <main className='max-w-[2560px]'>
+        <main className='md:overflow-[unset] relative max-w-[2560px] overflow-x-hidden xl:static'>
             <Section.Root>
                 <Section.Primary />
                 <Section.About />

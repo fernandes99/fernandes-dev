@@ -5,5 +5,5 @@ interface SectionRootProps {
 }
 
 export default function SectionRoot({ children }: SectionRootProps) {
-    return <div className='px-6 xl:px-0'>{children}</div>;
+    return <div className='md:overflow-[unset] overflow-hidden px-6 xl:px-0'>{children}</div>;
 }
