@@ -26,6 +26,10 @@ export const metadata: Metadata = {
             'Desenvolvedor Front End com experiência em React, Vue, NextJS, JavaScript, TypeScript, Styled Components, Tailwind, consumo de APIs REST, etc. Apaixonado por tecnologia.',
         images: '/imgs/website-thumb.png'
     }
+    // robots: {
+    //     index: config.env === 'production',
+    //     follow: config.env === 'production'
+    // }
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

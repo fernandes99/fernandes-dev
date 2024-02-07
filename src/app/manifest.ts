@@ -6,12 +6,12 @@ export default function manifest(): MetadataRoute.Manifest {
         short_name: 'Roberto Fernandes Dev',
         icons: [
             {
-                src: '../assets/fav/android-chrome-192x192.png',
+                src: '/favicon/android-chrome-192x192.png',
                 sizes: '192x192',
                 type: 'image/png'
             },
             {
-                src: '../assets/fav/android-chrome-256x256.png',
+                src: '/favicon/android-chrome-256x256.png',
                 sizes: '256x256',
                 type: 'image/png'
             }
