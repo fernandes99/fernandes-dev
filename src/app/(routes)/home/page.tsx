@@ -1,4 +1,3 @@
-import { Button } from 'cavilha-v2';
 import { Section } from './components/Section';
 import { Spotlight } from './components/Spotlight';
 
