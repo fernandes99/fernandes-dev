@@ -73,9 +73,9 @@ export default function SectionPrimary() {
                 </div>
             </div>
 
-            <div className='absolute left-[40%] top-[-10%] -z-10 overflow-hidden after:absolute after:left-0 after:top-0 after:h-full after:w-full after:bg-[radial-gradient(#191E2400_0%,#191E24_60%,#191E24_100%)]'>
+            <div className='absolute left-[40%] top-[5%] -z-10 overflow-hidden after:absolute after:left-0 after:top-0 after:h-full after:w-full after:bg-[radial-gradient(#191E2400_0%,#191E24_60%,#191E24_100%)] md:top-[-10%]'>
                 <Image
-                    className='translate-y-[80px] opacity-30 grayscale'
+                    className='translate-y-[0px] opacity-30 grayscale md:translate-y-[80px]'
                     src={ProfileImagePrincipal}
                     alt='Imagem de perfil de Roberto'
                 />
