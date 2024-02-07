@@ -2,8 +2,8 @@ import { MetadataRoute } from 'next';
 
 export default function manifest(): MetadataRoute.Manifest {
     return {
-        name: 'Portfólio Roberto Fernandes',
-        short_name: 'Fernandes Dev',
+        name: 'Roberto Fernandes - Desenvolvedor Front End',
+        short_name: 'Roberto Fernandes Dev',
         icons: [
             {
                 src: '../assets/fav/android-chrome-192x192.png',

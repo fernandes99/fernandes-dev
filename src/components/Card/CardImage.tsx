@@ -8,12 +8,13 @@ const styles = tv({
 
 interface CardRootProps extends ComponentProps<'div'> {
     pathImage: StaticImageData;
+    alt?: string;
 }
 
-export default function CardImage({ className, pathImage, ...rest }: CardRootProps) {
+export default function CardImage({ className, alt, pathImage, ...rest }: CardRootProps) {
     return (
         <div className={styles({ className })} {...rest}>
-            <Image src={pathImage} alt='teste' />
+            <Image src={pathImage} alt={alt} loading='lazy' />
         </div>
     );
 }

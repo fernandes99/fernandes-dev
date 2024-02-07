@@ -16,7 +16,7 @@ export const metadata: Metadata = {
             'Desenvolvedor Front End com experiência em React, Vue, NextJS, JavaScript, TypeScript, Styled Components, Tailwind, consumo de APIs REST, etc. Apaixonado por tecnologia.',
         type: 'website',
         url: 'https://www.robertofernandes.dev/',
-        images: 'https://www.robertofernandes.dev/imgs/website-thumb.png'
+        images: '/imgs/website-thumb.png'
     },
     twitter: {
         card: 'summary_large_image',
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
         site: 'https://www.robertofernandes.dev/',
         description:
             'Desenvolvedor Front End com experiência em React, Vue, NextJS, JavaScript, TypeScript, Styled Components, Tailwind, consumo de APIs REST, etc. Apaixonado por tecnologia.',
-        images: 'https://www.robertofernandes.dev/imgs/website-thumb.png'
+        images: '/imgs/website-thumb.png'
     }
 };
 

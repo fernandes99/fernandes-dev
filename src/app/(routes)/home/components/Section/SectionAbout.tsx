@@ -48,6 +48,7 @@ export default function SectionAbout() {
                 <Image
                     src={ProfileImageAbout}
                     alt='Imagem do Roberto Fernandes com símbolos por volta, referente à linguagens e frameworks front end'
+                    loading='lazy'
                 />
             </div>
         </section>

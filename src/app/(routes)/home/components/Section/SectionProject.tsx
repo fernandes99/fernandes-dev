@@ -38,7 +38,10 @@ export default function SectionProject() {
                 {projectList.map((project) => (
                     <li key={project.id}>
                         <Card.Root className='h-full'>
-                            <Card.Image pathImage={project.path_image} />
+                            <Card.Image
+                                pathImage={project.path_image}
+                                alt={`Thumb do projeto ${project.title}`}
+                            />
                             <Card.Head>
                                 <div className='flex flex-wrap justify-between gap-4'>
                                     <a
