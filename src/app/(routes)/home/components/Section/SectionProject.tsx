@@ -51,7 +51,7 @@ export default function SectionProject() {
                                         <FaGithub className='text-secondary-200' />
                                     </a>
                                     <a
-                                        href={project.github_link}
+                                        href={project.project_link}
                                         title={`Acessar projeto de ${project.title}`}
                                         target='_blank'
                                         className='flex w-fit items-center gap-1 hover:opacity-70'
