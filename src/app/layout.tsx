@@ -5,6 +5,7 @@ import Header from '@/components/Header';
 import { config } from '@/config/general';
 import Link from 'next/link';
 import Footer from '@/components/Footer';
+import { GoogleAnalytics } from '@next/third-parties/google';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -36,6 +37,7 @@ export const metadata: Metadata = {
         icon: '/favicon/favicon.ico',
         apple: '/favicon/apple-touch-icon.png'
     }
+
     // robots: {
     //     index: config.env === 'production',
     //     follow: config.env === 'production'
@@ -50,6 +52,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 {children}
                 <Footer />
             </body>
+
+            <GoogleAnalytics gaId={config.tokens.GA} />
         </html>
     );
 }

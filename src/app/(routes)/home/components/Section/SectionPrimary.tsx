@@ -6,8 +6,19 @@ import { RxExternalLink } from 'react-icons/rx';
 
 import ProfileImagePrincipal from '@/assets/img/profile_image_01_20220626.png';
 import Image from 'next/image';
+import { sendGAEvent } from '@next/third-parties/google';
 
 export default function SectionPrimary() {
+    const onClickCV = () => {
+        sendGAEvent({ category: 'primary-section', label: 'button-cv', action: 'click' });
+        window.open('/docs/curriculo_roberto_fernandes_2023.pdf', '_blank');
+    };
+
+    const onClickProjects = () => {
+        sendGAEvent({ category: 'primary-section', label: 'button-projects', action: 'click' });
+        document.querySelector('#projetos')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    };
+
     return (
         <section className='container mx-auto grid max-w-[1020px] grid-cols-1 gap-16 pb-12 pt-12 xl:grid-cols-2 xl:pb-24 xl:pt-32'>
             <div className='py-24'>
@@ -24,22 +35,10 @@ export default function SectionPrimary() {
                         desenvolver soluções de alta qualidade.
                     </p>
                     <div className='flex flex-wrap gap-2'>
-                        <Button
-                            className='mr-2'
-                            onClick={() =>
-                                window.open('/docs/curriculo_roberto_fernandes_2023.pdf', '_blank')
-                            }
-                        >
+                        <Button className='mr-2' onClick={onClickCV}>
                             Ver currículo <RxExternalLink />
                         </Button>
-                        <Button
-                            variant='secondary'
-                            onClick={() =>
-                                document
-                                    .querySelector('#projetos')
-                                    ?.scrollIntoView({ behavior: 'smooth', block: 'start' })
-                            }
-                        >
+                        <Button variant='secondary' onClick={onClickProjects}>
                             Ver projetos
                         </Button>
                     </div>
