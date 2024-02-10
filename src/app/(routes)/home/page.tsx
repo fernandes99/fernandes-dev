@@ -1,5 +1,4 @@
 import { Section } from './components/Section';
-import { Spotlight } from './components/Spotlight';
 
 export default function HomePage() {
     return (
@@ -10,8 +9,6 @@ export default function HomePage() {
                 <Section.Experience />
                 <Section.Project />
             </Section.Root>
-
-            <Spotlight />
         </main>
     );
 }

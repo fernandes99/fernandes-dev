@@ -17,6 +17,7 @@ const config: Config = {
         'secondary-800-hover': '#1B2227',
         'secondary-500': '#384656',
         'secondary-200': '#7C8CA0',
+        'secondary-100': '#C8D6E8',
 
         'background': '#191E24',
       },

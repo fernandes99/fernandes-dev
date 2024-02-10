@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#article-content h2 {
+    font-size: 1.6rem;
+    font-weight: 500;
+    margin-top: 0.9rem;
+}
+
+#article-content h3 {
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+#article-content h4 {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+#article-content p {
+    margin-bottom: 0.9rem;
+}
+
+#article-content ul,
+#article-content ol {
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+    margin-bottom: 0.9rem;
+}
+
+#article-content hr {
+    opacity: 0.05;
+}

@@ -5,6 +5,18 @@ export default function Header() {
     return (
         <header>
             <Navigation.Root>
+                <Navigation.Logo
+                    symbol={
+                        <a href='/' title='Voltar para a home'>
+                            <div className='flex items-center text-2xl'>
+                                <span>Fernandes</span>
+                                <span className='font-semibold text-primary-500 drop-shadow-[0px_2px_8px_rgba(70,33,159,1)]'>
+                                    Dev
+                                </span>
+                            </div>
+                        </a>
+                    }
+                />
                 <Navigation.List>
                     {navData.list.map((item) => (
                         <Navigation.Item

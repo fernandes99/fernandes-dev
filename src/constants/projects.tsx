@@ -141,5 +141,14 @@ export const projectList = [
         path_image: BushFarmImage,
         github_link: 'https://github.com/fernandes99/bushfarm',
         project_link: 'https://bushfarm.netlify.com/'
+    },
+    {
+        id: '7',
+        title: 'Fernandes Dev',
+        description: 'Meu próprio site.',
+        tools: [tool.react, tool.typescript, tool.figma],
+        path_image: BushFarmImage,
+        github_link: 'https://github.com/fernandes99/bushfarm',
+        project_link: 'https://bushfarm.netlify.com/'
     }
 ];
