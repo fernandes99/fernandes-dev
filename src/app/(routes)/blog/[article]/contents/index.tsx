@@ -10,7 +10,7 @@ async function ArticleContent({ slug }: ArticleContentProps) {
     const article = await ArticleService.getBySlug(slug);
 
     return (
-        <section className='grid grid-cols-[3fr,1fr]'>
+        <section className='grid grid-cols-1 md:grid-cols-[3fr,1fr]'>
             <div className='flex flex-col gap-4'>
                 <div className='flex flex-wrap gap-2'>
                     {article.tags.map((tag) => (
@@ -54,7 +54,7 @@ async function ArticleContent({ slug }: ArticleContentProps) {
 
                 <hr className='opacity-5' />
 
-                <div className='flex h-96 w-full items-center justify-center overflow-hidden rounded-lg object-cover'>
+                <div className='flex h-full w-auto items-center justify-center overflow-hidden rounded-lg object-cover md:h-96 md:w-full'>
                     <Image
                         src={article.cover.url}
                         alt={article.cover.alt}

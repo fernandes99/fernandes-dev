@@ -1,5 +1,3 @@
-'use client';
-
 import { usePathname } from 'next/navigation';
 import { ComponentProps, ReactNode } from 'react';
 
@@ -12,9 +10,9 @@ export default function NavigationRoot({ children }: NavigationRootProps) {
 
     return (
         <nav
-            className={`${pathname === '/' ? 'fixed' : 'absolute'} z-10 h-16 w-full bg-blend-soft-light backdrop-blur-sm`}
+            className={`z-10 w-full bg-blend-soft-light backdrop-blur-sm ${pathname === '/' ? 'fixed' : 'absolute'}`}
         >
-            <div className='container mx-auto flex h-full max-w-[1020px] items-center gap-8 p-2'>
+            <div className='container mx-auto flex h-16 max-w-[1020px] items-center justify-between p-2'>
                 {children}
             </div>
         </nav>

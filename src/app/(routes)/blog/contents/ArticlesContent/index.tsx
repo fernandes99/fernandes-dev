@@ -6,7 +6,7 @@ async function ArticlesContent() {
     const articles = await ArticleService.getAll();
 
     return (
-        <div className='grid grid-cols-3 gap-6'>
+        <div className='grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3'>
             {articles.map((article) => (
                 <article key={article.slug} className='rounded-xl border border-secondary-800 p-2'>
                     <div className='h-48 overflow-hidden rounded-lg'>
