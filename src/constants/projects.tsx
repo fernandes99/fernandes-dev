@@ -18,6 +18,7 @@ import {
 import { SiStyledcomponents } from 'react-icons/si';
 import { TbBrandNextjs } from 'react-icons/tb';
 import { RxFigmaLogo } from 'react-icons/rx';
+import { config } from '@/config/general';
 
 const tool = {
     js_vanilla: {
@@ -110,8 +111,8 @@ export const projectList = [
             'O projeto que você está visualizando neste site funciona não apenas como um portfólio, mas também como um blog. Foi construído utilizando NextJS e está integrado com DatoCMS.',
         tools: [tool.nextjs, tool.react, tool.tailwind, tool.typescript, tool.figma],
         path_image: FernandesDevImage,
-        github_link: 'https://github.com/fernandes99/bushfarm',
-        project_link: 'https://bushfarm.netlify.com/'
+        github_link: 'https://github.com/fernandes99/fernandes-dev',
+        project_link: config.urls.base
     },
     {
         id: '4',

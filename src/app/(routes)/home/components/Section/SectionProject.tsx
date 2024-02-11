@@ -41,6 +41,7 @@ export default function SectionProject() {
                             <Card.Image
                                 pathImage={project.path_image}
                                 alt={`Thumb do projeto ${project.title}`}
+                                title={`Thumb do projeto ${project.title}`}
                             />
                             <Card.Head>
                                 <div className='flex flex-wrap justify-between gap-4'>

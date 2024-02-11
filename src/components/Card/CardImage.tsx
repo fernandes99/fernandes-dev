@@ -14,7 +14,7 @@ interface CardRootProps extends ComponentProps<'div'> {
 export default function CardImage({ className, alt, pathImage, ...rest }: CardRootProps) {
     return (
         <div className={styles({ className })} {...rest}>
-            <Image src={pathImage} alt={alt} loading='lazy' />
+            <Image src={pathImage} alt={alt} loading='lazy' quality={100} />
         </div>
     );
 }
