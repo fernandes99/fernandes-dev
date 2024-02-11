@@ -1,9 +1,9 @@
+import { MetadataRoute } from 'next';
 import { config } from '@/config/general';
 import { ArticleService } from '@/services/articles';
-import { MetadataRoute } from 'next';
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-    const articles = await ArticleService.getAllSlugs();
+    const articles = (await ArticleService.getAllSlugs()) || [];
     const sitemapArticles = articles.map((article) => {
         return {
             url: `${config.urls.base}/blog/${article.slug}`,

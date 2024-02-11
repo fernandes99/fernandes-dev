@@ -33,7 +33,7 @@ export default function Header() {
             <nav
                 className={`z-10 w-full bg-blend-soft-light backdrop-blur-sm ${pathname === '/' ? 'fixed' : 'absolute'}`}
             >
-                <div className='container mx-auto flex h-16 max-w-[1020px] items-center justify-between px-4 py-2'>
+                <div className='container mx-auto flex h-16 max-w-[1020px] items-center justify-between px-4 py-2 md:px-0'>
                     <div className='flex h-16 items-center'>
                         <a
                             href='/'
@@ -64,13 +64,15 @@ export default function Header() {
                                         <IoClose size={24} className={'text-secondary-100'} />
                                     </button>
                                     <div className='h-full w-4/5 bg-white p-4'>
-                                        <ul className='flex flex-col gap-6'>
+                                        <ul className='flex flex-col gap-2'>
                                             {navData.list.map((item) => (
-                                                <li
-                                                    key={item.title}
-                                                    className='rounded-md px-3 py-1 text-secondary-800 hover:bg-black/20'
-                                                >
-                                                    <a {...item}>{item.title}</a>
+                                                <li key={item.title}>
+                                                    <a
+                                                        {...item}
+                                                        className='flex w-full rounded-md px-3 py-4 text-secondary-800 hover:bg-black/5'
+                                                    >
+                                                        {item.title}
+                                                    </a>
                                                 </li>
                                             ))}
                                         </ul>
@@ -81,11 +83,10 @@ export default function Header() {
                     ) : (
                         <ul className='flex items-center gap-6 opacity-0 md:opacity-100'>
                             {navData.list.map((item) => (
-                                <li
-                                    key={item.title}
-                                    className='rounded-md px-3 py-1 hover:bg-black/20'
-                                >
-                                    <a {...item}>{item.title}</a>
+                                <li key={item.title}>
+                                    <a {...item} className='rounded-md px-3 py-1 hover:bg-black/20'>
+                                        {item.title}
+                                    </a>
                                 </li>
                             ))}
                         </ul>
