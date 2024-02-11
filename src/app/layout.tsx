@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import { Inter } from 'next/font/google';
 import '../styles/global.css';
 import Header from '@/components/Header';
@@ -8,6 +8,11 @@ import { GoogleAnalytics } from '@next/third-parties/google';
 import { Spotlight } from '@/components/Spotlight';
 
 const inter = Inter({ subsets: ['latin'] });
+
+export const viewport: Viewport = {
+    initialScale: 1,
+    width: 'device-width'
+};
 
 export const metadata: Metadata = {
     title: 'Roberto Fernandes - Desenvolvedor Front End',
@@ -36,12 +41,21 @@ export const metadata: Metadata = {
     icons: {
         icon: '/favicon/favicon.ico',
         apple: '/favicon/apple-touch-icon.png'
-    }
-
-    // robots: {
-    //     index: config.env === 'production',
-    //     follow: config.env === 'production'
-    // }
+    },
+    creator: 'Roberto Fernandes',
+    keywords: [
+        'front-end',
+        'react',
+        'vuejs',
+        'nextjs',
+        'vuejs',
+        'typescript',
+        'javascript',
+        'desenvolvedor',
+        'portfólio',
+        'fernandes',
+        'dev'
+    ]
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

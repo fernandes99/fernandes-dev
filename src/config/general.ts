@@ -3,8 +3,8 @@ export const config = {
     urls: {
         base:
             process.env.NODE_ENV === 'production'
-                ? 'https://www.robertofernandes.dev/'
-                : 'http://localhost:3000/',
+                ? 'https://www.robertofernandes.dev'
+                : 'http://localhost:3000',
         datoGraphQL: process.env.DATOCMS_GRAPQL_URL
     },
     tokens: {
