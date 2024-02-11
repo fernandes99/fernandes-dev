@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import { ArticleService } from '@/services/articles';
 import '@/styles/article.css';
+import HiglightCode from '@/components/HighlightCode';
 
 interface ArticleContentProps {
     slug: string;
@@ -66,11 +67,15 @@ async function ArticleContent({ slug }: ArticleContentProps) {
                     />
                 </div>
 
-                <div
+                <div id='article-content'>
+                    <HiglightCode content={article.content} />
+                </div>
+
+                {/* <div
                     dangerouslySetInnerHTML={{ __html: article.content }}
                     className='flex flex-col gap-4 text-secondary-100'
                     id='article-content'
-                />
+                /> */}
             </div>
         </section>
     );
