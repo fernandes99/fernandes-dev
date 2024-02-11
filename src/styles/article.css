@@ -33,3 +33,30 @@
 #article-content hr {
     opacity: 0.05;
 }
+
+#article-content pre {
+    background-color: #1b2227;
+    padding: 16px;
+    border: 1px solid #ffffff05;
+    border-radius: 5px;
+    overflow: auto;
+}
+
+#article-content code {
+    font-family: 'Courier New', Courier, monospace;
+    color: #fff;
+    font-size: 14px;
+}
+
+#article-content a {
+    color: #00a2ff;
+    background-color: #00a2ff10;
+    padding: 1px 4px;
+    border-radius: 6px;
+    font-weight: 500;
+    translate: all 0.3s;
+}
+
+#article-content a:hover {
+    opacity: 0.75;
+}
