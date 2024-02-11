@@ -68,7 +68,7 @@ async function ArticleContent({ slug }: ArticleContentProps) {
 
                 <div
                     dangerouslySetInnerHTML={{ __html: article.content }}
-                    className='text-secondary-100 flex flex-col gap-4'
+                    className='flex flex-col gap-4 text-secondary-100'
                     id='article-content'
                 />
             </div>

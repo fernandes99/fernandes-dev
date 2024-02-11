@@ -8,7 +8,10 @@ async function ArticlesContent() {
     return (
         <div className='grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3'>
             {articles.map((article) => (
-                <article key={article.slug} className='rounded-xl border border-secondary-800 p-2'>
+                <article
+                    key={article.slug}
+                    className='rounded-xl border border-secondary-800 p-2 transition-all hover:border-secondary-800-hover'
+                >
                     <div className='h-48 overflow-hidden rounded-lg'>
                         <Image
                             src={article.cover.url}

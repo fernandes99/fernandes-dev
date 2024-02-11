@@ -34,18 +34,30 @@
     opacity: 0.05;
 }
 
+#article-content code {
+    background-color: #ffffff10;
+    border: 1px solid #ffffff20;
+    color: #ffffff;
+    font-weight: 600;
+    padding: 2px 4px;
+    border-radius: 6px;
+}
+
+#article-content pre code {
+    font-family: 'Courier New', Courier, monospace;
+    color: #fff;
+    font-size: 14px;
+    padding: unset;
+    border: unset;
+    background-color: unset;
+}
+
 #article-content pre {
     background-color: #1b2227;
     padding: 16px;
     border: 1px solid #ffffff05;
     border-radius: 5px;
     overflow: auto;
-}
-
-#article-content code {
-    font-family: 'Courier New', Courier, monospace;
-    color: #fff;
-    font-size: 14px;
 }
 
 #article-content a {

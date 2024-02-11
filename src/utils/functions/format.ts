@@ -29,7 +29,7 @@ const format = {
         }
 
         if (format === 'DD/MM/AAAA') {
-            const day = value.getDay() < 10 ? `0${value.getDay()}` : value.getDay();
+            const day = value.getDate() < 10 ? `0${value.getDate()}` : value.getDate();
             const month = value.getMonth() < 10 ? `0${value.getMonth()}` : value.getMonth();
             const year = value.getFullYear();
 
@@ -37,7 +37,7 @@ const format = {
         }
 
         if (format === 'DD MM, AAAA') {
-            const day = value.getDay() < 10 ? `0${value.getDay()}` : value.getDay();
+            const day = value.getDate() < 10 ? `0${value.getDate()}` : value.getDate();
             const month = MONTHS_ABREVIATED[value.getMonth()];
             const year = value.getFullYear();
 
