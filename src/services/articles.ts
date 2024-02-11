@@ -1,4 +1,5 @@
 import { config } from '@/config/general';
+import { HOUR_IN_SECOND } from '@/constants/time';
 import { IArticle } from '@/types/articles';
 import getQueryArticleBySlug from '@/utils/graphql/getQueryArticleBySlug';
 import getQueryAllArticles from '@/utils/graphql/getQueryArticles';
@@ -37,7 +38,10 @@ export const ArticleService = {
                 },
                 body: JSON.stringify({
                     query: getQueryAllArticles({ first: 10 })
-                })
+                }),
+                next: {
+                    revalidate: HOUR_IN_SECOND
+                }
             });
             const result = (await response.json()) as IGetAllResult;
             return result.data.allArticles;
@@ -56,7 +60,10 @@ export const ArticleService = {
                 },
                 body: JSON.stringify({
                     query: getQueryArticleBySlug(slug)
-                })
+                }),
+                next: {
+                    revalidate: HOUR_IN_SECOND
+                }
             });
             const result = (await response.json()) as IGetBySlugResult;
             return result.data.article;
@@ -75,7 +82,10 @@ export const ArticleService = {
                 },
                 body: JSON.stringify({
                     query: getQueryAllArticlesSlug()
-                })
+                }),
+                next: {
+                    revalidate: HOUR_IN_SECOND
+                }
             });
             const result = (await response.json()) as IGetAllSlugsResult;
             return result.data.allArticles;
