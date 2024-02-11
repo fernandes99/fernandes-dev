@@ -5,6 +5,7 @@ import PokegoalImage from '@/assets/img/pokegoal_20231201.png';
 import ClickvetImage from '@/assets/img/clickvet_20231201.png';
 import BushFarmImage from '@/assets/img/bushfarm_20231201.png';
 import FernandesDevImage from '@/assets/img/fernandes_dev_20240111.png';
+import AxenyaImage from '@/assets/img/axenya_20240211.png';
 
 import {
     BiLogoTypescript,
@@ -96,16 +97,6 @@ export const projectList = [
     },
     {
         id: '2',
-        title: 'Batatinha Frita 123',
-        description:
-            'Um jogo em JS Puro, baseado em um dos jogos da série Round 6. Seu objetivo era de aprimorar minhas skills utilizando orientação a objeto com JS puro.',
-        tools: [tool.js_vanilla, tool.css, tool.figma],
-        path_image: BatatinhaFrita123Image,
-        github_link: 'https://github.com/fernandes99/batatinha-frita-123',
-        project_link: 'https://fernandes99.github.io/batatinha-frita-123/'
-    },
-    {
-        id: '3',
         title: 'Blog & Portfólio',
         description:
             'O projeto que você está visualizando neste site funciona não apenas como um portfólio, mas também como um blog. Foi construído utilizando NextJS e está integrado com DatoCMS.',
@@ -115,7 +106,27 @@ export const projectList = [
         project_link: config.urls.base
     },
     {
+        id: '3',
+        title: 'Batatinha Frita 123',
+        description:
+            'Um jogo em JS Puro, baseado em um dos jogos da série Round 6. Seu objetivo era de aprimorar minhas skills utilizando orientação a objeto com JS puro.',
+        tools: [tool.js_vanilla, tool.css, tool.figma],
+        path_image: BatatinhaFrita123Image,
+        github_link: 'https://github.com/fernandes99/batatinha-frita-123',
+        project_link: 'https://fernandes99.github.io/batatinha-frita-123/'
+    },
+    {
         id: '4',
+        title: 'Axenya',
+        description:
+            'Durante meu trabalho como freelancer na Axenya, tive a oportunidade de criar todo site e blog da empresa do zero com validações e alinhamento de ponta a ponta.',
+        tools: [tool.nextjs, tool.react, tool.styled_component, tool.typescript, tool.figma],
+        path_image: AxenyaImage,
+        github_link: '',
+        project_link: 'https://axenya.com/'
+    },
+    {
+        id: '5',
         title: 'Coupverse',
         description:
             'Um projeto front e backend em mono repo, utilizando websocket. O jogo simula um famoso jogo de cartas chamado Coup. Feito completo do protótipo ao código.',
@@ -125,7 +136,7 @@ export const projectList = [
         project_link: 'https://coupverse.vercel.app/'
     },
     {
-        id: '5',
+        id: '6',
         title: 'Pokegoal',
         description:
             'Um jogo clássico de pokemon, onde há sistemas de captura e pokedex desses pequenos bichinhos. Feito completo do protótipo ao código.',
@@ -135,7 +146,7 @@ export const projectList = [
         project_link: 'https://pokegoal.netlify.com/'
     },
     {
-        id: '6',
+        id: '7',
         title: 'Clickvet',
         description:
             'Um sistema simples, onde busca, de acordo com o seu CEP, veterinários próximos com base em dados de uma planilha, utilizando o webhook do google sheets.',
@@ -145,7 +156,7 @@ export const projectList = [
         project_link: 'https://clickvet.netlify.com/'
     },
     {
-        id: '7',
+        id: '8',
         title: 'Bushfarm',
         description:
             'Um jogo de fazenda simples, onde você pode comprar e cultivar plantações. Imitando a ideia de uma mineração de cripto.',

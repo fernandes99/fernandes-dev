@@ -46,13 +46,15 @@ export default function SectionProject() {
                             <Card.Head>
                                 <div className='flex flex-wrap justify-between gap-4'>
                                     <a
-                                        href={project.github_link}
+                                        href={project.github_link || '/'}
                                         title={`Acessar repositório de ${project.title}`}
                                         target='_blank'
                                         className='flex w-fit items-center gap-2 hover:opacity-70'
                                     >
                                         <p className='text-lg font-semibold'>{project.title}</p>
-                                        <FaGithub className='text-secondary-200' />
+                                        {!!project.github_link && (
+                                            <FaGithub className='text-secondary-200' />
+                                        )}
                                     </a>
                                     <a
                                         href={project.project_link}
