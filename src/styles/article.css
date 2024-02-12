@@ -57,12 +57,13 @@
     font-weight: 600;
     padding: 2px 4px;
     border-radius: 6px;
+    font-size: 14px;
 }
 
 #article-content pre code {
     font-family: 'Courier New', Courier, monospace;
     color: #fff;
-    font-size: 14px;
+    font-weight: 400;
     padding: unset;
     border: unset;
     background-color: unset;
