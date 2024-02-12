@@ -10,7 +10,7 @@ import 'highlight.js/styles/github-dark.css';
 hljs.registerLanguage('typescript', typescript);
 hljs.registerLanguage('xml', xml);
 
-const HiglightCode = ({ content }) => {
+const PostContent = ({ content }) => {
     useEffect(() => {
         hljs.highlightAll();
     }, []);
@@ -25,4 +25,4 @@ const HiglightCode = ({ content }) => {
     );
 };
 
-export default HiglightCode;
+export default PostContent;

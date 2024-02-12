@@ -1,9 +1,9 @@
 import Image from 'next/image';
 import { FaXTwitter, FaFacebook, FaLinkedin } from 'react-icons/fa6';
-import HiglightCode from '@/components/HighlightCode';
 import { ArticleService } from '@/services/articles';
-import '@/styles/article.css';
 import { config } from '@/config/general';
+import PostContent from '@/components/PostContent';
+import '@/styles/article.css';
 
 interface ArticleContentProps {
     slug: string;
@@ -23,7 +23,7 @@ async function ArticleContent({ slug }: ArticleContentProps) {
                     {article.tags.map((tag) => (
                         <a
                             key={tag.id}
-                            href={`/tags/${tag.slug}`}
+                            href={`/blog/tags/${tag.slug}`}
                             className='flex w-fit cursor-pointer rounded-lg px-2 py-1'
                             style={{
                                 backgroundColor: tag.color ? `${tag.color.hex}10` : '#20262B'
@@ -73,9 +73,9 @@ async function ArticleContent({ slug }: ArticleContentProps) {
                     />
                 </div>
 
-                <div id='article-content'>
-                    <HiglightCode content={article.content} />
-                </div>
+                <article id='article-content'>
+                    <PostContent content={article.content} />
+                </article>
             </div>
 
             <div className='sticky top-6 h-fit'>

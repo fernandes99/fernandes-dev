@@ -26,7 +26,7 @@ async function ArticlesContent() {
                     </div>
                     <div className='mt-2 flex flex-col gap-2 p-2'>
                         <a
-                            href={`/tags/${article.tags[0].slug}`}
+                            href={`/blog/tags/${article.tags[0].slug}`}
                             className='flex w-fit cursor-pointer rounded-lg px-2 py-1'
                             style={{
                                 backgroundColor: article.tags[0].color

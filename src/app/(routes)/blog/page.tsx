@@ -36,7 +36,7 @@ export const metadata: Metadata = {
 
 export default function BlogPage() {
     return (
-        <main className='md:overflow-[unset] relative max-w-[2560px] overflow-x-hidden py-20 lg:py-40 xl:static'>
+        <main className='relative max-w-[2560px] py-20 lg:py-40'>
             <section className='container mx-auto grid max-w-[1020px] p-4 lg:p-0'>
                 <div className='mb-4'>
                     <h1 className='mb-2 text-sm font-light text-secondary-200'>

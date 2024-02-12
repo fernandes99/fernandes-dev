@@ -1,6 +1,6 @@
 import { Suspense } from 'react';
-import ArticleContent from './contents';
-import type { Metadata, ResolvingMetadata } from 'next';
+import ArticleContent from './contents/ArticleContent';
+import type { Metadata } from 'next';
 import { ArticleService } from '@/services/articles';
 import { config } from '@/config/general';
 

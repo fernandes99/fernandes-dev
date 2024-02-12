@@ -26,7 +26,7 @@ interface IArticleSEO {
     twitterCard: string;
 }
 
-interface IArticleTag {
+export interface IArticleTag {
     id: string;
     slug: string;
     title: string;
