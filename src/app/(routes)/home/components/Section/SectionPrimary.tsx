@@ -10,12 +10,12 @@ import { sendGAEvent } from '@next/third-parties/google';
 
 export default function SectionPrimary() {
     const onClickCV = () => {
-        sendGAEvent({ category: 'primary-section', label: 'button-cv', action: 'click' });
+        sendGAEvent({ event: 'primary-section', label: 'button-cv', action: 'click' });
         window.open('/docs/curriculo_roberto_fernandes_2023.pdf', '_blank');
     };
 
     const onClickProjects = () => {
-        sendGAEvent({ category: 'primary-section', label: 'button-projects', action: 'click' });
+        sendGAEvent({ event: 'primary-section', label: 'button-projects', action: 'click' });
         document.querySelector('#projetos')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
     };
 
