@@ -33,7 +33,7 @@ export default function Header() {
             <nav
                 className={`z-10 w-full bg-blend-soft-light backdrop-blur-sm ${pathname === '/' ? 'fixed' : 'absolute'}`}
             >
-                <div className='container mx-auto flex h-16 max-w-[1020px] items-center justify-between px-4 py-2 md:px-0'>
+                <div className='container mx-auto flex h-16 max-w-[1020px] items-center justify-between px-4 py-2 lg:px-0'>
                     <div className='flex h-16 items-center'>
                         <a
                             href='/'

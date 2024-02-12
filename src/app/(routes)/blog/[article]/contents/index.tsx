@@ -1,7 +1,9 @@
 import Image from 'next/image';
+import { FaXTwitter, FaFacebook, FaLinkedin } from 'react-icons/fa6';
+import HiglightCode from '@/components/HighlightCode';
 import { ArticleService } from '@/services/articles';
 import '@/styles/article.css';
-import HiglightCode from '@/components/HighlightCode';
+import { config } from '@/config/general';
 
 interface ArticleContentProps {
     slug: string;
@@ -9,9 +11,13 @@ interface ArticleContentProps {
 
 async function ArticleContent({ slug }: ArticleContentProps) {
     const article = await ArticleService.getBySlug(slug);
+    const articleUrl = `${config.urls.base}/blog/${article.slug}`;
+    const twitterShareUrl = `https://twitter.com/share?text=${article.title}&url=${articleUrl}&hashtags=${article.tags.map((tag) => tag.slug).join(',')}`;
+    const facebookShareUrl = `https://www.facebook.com/sharer/sharer.php?u=${articleUrl}&t=${article.title}`;
+    const linkedInShareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${articleUrl}`;
 
     return (
-        <section className='grid grid-cols-1 md:grid-cols-[3fr,1fr]'>
+        <section className='grid grid-cols-1 gap-4 lg:grid-cols-[3fr,1fr]'>
             <div className='flex flex-col gap-4'>
                 <div className='flex flex-wrap gap-2'>
                     {article.tags.map((tag) => (
@@ -70,12 +76,48 @@ async function ArticleContent({ slug }: ArticleContentProps) {
                 <div id='article-content'>
                     <HiglightCode content={article.content} />
                 </div>
+            </div>
 
-                {/* <div
-                    dangerouslySetInnerHTML={{ __html: article.content }}
-                    className='flex flex-col gap-4 text-secondary-100'
-                    id='article-content'
-                /> */}
+            <div className='sticky top-6 h-fit'>
+                <span className='flex justify-center text-secondary-200 lg:hidden'>
+                    Compartilhe
+                </span>
+                <div className='flex flex-row items-center justify-center lg:flex-col'>
+                    <a
+                        className='group rounded-xl p-4 transition-all hover:bg-secondary-800-hover'
+                        title='Compartilhar no Twitter'
+                        href={twitterShareUrl}
+                        target='_blank'
+                    >
+                        <FaXTwitter
+                            size={32}
+                            className='text-secondary-200 transition-all group-hover:opacity-75'
+                        />
+                    </a>
+                    <a
+                        className='group rounded-xl p-4 transition-all hover:bg-secondary-800-hover'
+                        title='Compartilhar no Facebook'
+                        href={facebookShareUrl}
+                        target='_blank'
+                    >
+                        <FaFacebook
+                            size={32}
+                            className='text-secondary-200 transition-all group-hover:opacity-75'
+                        />
+                    </a>
+                    <a
+                        className='group rounded-xl p-4 transition-all hover:bg-secondary-800-hover'
+                        title='Compartilhar no LinkedIn'
+                        href={linkedInShareUrl}
+                        target='_blank'
+                    >
+                        <FaLinkedin
+                            size={32}
+                            className='text-secondary-200 transition-all group-hover:opacity-75'
+                            target='_blank'
+                        />
+                    </a>
+                </div>
             </div>
         </section>
     );
