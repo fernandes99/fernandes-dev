@@ -20,7 +20,13 @@ export async function generateMetadata({ params }: MetadataProps): Promise<Metad
             title: article.seo.title,
             description: article.seo.description,
             images: article.cover.url,
-            type: 'article'
+            type: 'article',
+            publishedTime: new Date(article._publishedAt).toISOString(),
+            modifiedTime: new Date(article._updatedAt).toISOString(),
+            authors: article.author.name,
+            siteName: article.seo.title,
+            url: `${config.urls.base}/blog/${article.slug}`,
+            locale: 'pt_BR'
         },
         twitter: {
             card: 'summary_large_image',
@@ -33,6 +39,7 @@ export async function generateMetadata({ params }: MetadataProps): Promise<Metad
             name: article.author.name,
             url: config.urls.base
         },
+        publisher: 'https://www.linkedin.com/in/roberto-brito-fernandes/',
         metadataBase: new URL(config.urls.base),
         alternates: {
             canonical: `${config.urls.base}/blog/${article.slug}`
