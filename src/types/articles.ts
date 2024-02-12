@@ -30,6 +30,7 @@ export interface IArticleTag {
     id: string;
     slug: string;
     title: string;
+    _updatedAt: Date;
     color?: {
         hex: string;
     };

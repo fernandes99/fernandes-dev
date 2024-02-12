@@ -2,6 +2,7 @@ import { config } from '@/config/general';
 import { HOUR_IN_SECOND } from '@/constants/time';
 import { IArticle, IArticleTag } from '@/types/articles';
 import getQueryAllArticlesByTagId from '@/utils/graphql/getQueryAllArticlesByTagId';
+import getQueryAllTags from '@/utils/graphql/getQueryAllTags';
 import getQueryArticleBySlug from '@/utils/graphql/getQueryArticleBySlug';
 import getQueryAllArticles from '@/utils/graphql/getQueryArticles';
 import getQueryAllArticlesSlug from '@/utils/graphql/getQueryArticlesSlugs';
@@ -31,6 +32,12 @@ interface IGetAllSlugsResult {
 interface IGetTagBySlugResult {
     data: {
         tag: IArticleTag;
+    };
+}
+
+interface IGetAllTagsResult {
+    data: {
+        allTags: IArticleTag[];
     };
 }
 
@@ -141,6 +148,28 @@ export const ArticleService = {
             });
             const result = (await response.json()) as IGetTagBySlugResult;
             return result.data.tag;
+        } catch (e) {
+            return null;
+        }
+    },
+    getAllTags: async () => {
+        try {
+            const url = config.urls.datoGraphQL;
+            const response = await fetch(url, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    Authorization: config.tokens.datoCms
+                },
+                body: JSON.stringify({
+                    query: getQueryAllTags()
+                }),
+                next: {
+                    revalidate: HOUR_IN_SECOND
+                }
+            });
+            const result = (await response.json()) as IGetAllTagsResult;
+            return result.data.allTags;
         } catch (e) {
             return null;
         }
