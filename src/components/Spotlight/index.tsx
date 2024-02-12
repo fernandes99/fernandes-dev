@@ -7,9 +7,10 @@ export function Spotlight() {
     const size = 600;
     const handleOver = (event: MouseEvent) => {
         const element = spotlightRef.current!;
+        const x = event.clientX - size / 2;
+        const y = event.clientY - size / 2;
 
-        element.style.left = `${event.clientX - size / 2}px`;
-        element.style.top = `${event.clientY - size / 2}px`;
+        element.style.transform = `translate(${x}px, ${y}px)`;
     };
 
     useEffect(() => {
@@ -24,7 +25,7 @@ export function Spotlight() {
                 width: `${size}px`,
                 height: `${size}px`
             }}
-            className={`pointer-events-none fixed bg-[radial-gradient(#0063d9_0%,#0063d900_70%)] opacity-5`}
+            className={`pointer-events-none fixed left-0 top-0 bg-[radial-gradient(#0063d9_0%,#0063d900_70%)] opacity-5`}
         />
     );
 }
