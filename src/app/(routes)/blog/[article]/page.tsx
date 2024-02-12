@@ -3,6 +3,7 @@ import ArticleContent from './contents/ArticleContent';
 import type { Metadata } from 'next';
 import { ArticleService } from '@/services/articles';
 import { config } from '@/config/general';
+import SkeletonArticleContent from './contents/ArticleContent/skeleton';
 
 type MetadataProps = {
     params: {
@@ -58,7 +59,7 @@ export default function BlogPage({ params }: BlogPageProps) {
     return (
         <main className='relative max-w-[2560px] py-20 lg:py-40'>
             <section className='container mx-auto grid max-w-[1020px] p-4 lg:p-0'>
-                <Suspense fallback={<span>Loading</span>}>
+                <Suspense fallback={<SkeletonArticleContent />}>
                     <ArticleContent slug={params.article} />
                 </Suspense>
             </section>
