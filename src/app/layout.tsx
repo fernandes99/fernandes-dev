@@ -6,6 +6,7 @@ import { config } from '@/config/general';
 import Footer from '@/components/Footer';
 import { Spotlight } from '@/components/Spotlight';
 import GoogleAnalytics from '@/components/GoogleAnalytics';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -63,6 +64,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <html lang='pt-BR'>
             <body className={inter.className}>
                 <GoogleAnalytics />
+                <SpeedInsights />
                 <Header />
 
                 {children}
