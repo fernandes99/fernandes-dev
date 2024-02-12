@@ -26,9 +26,9 @@ export const experienceList = [
         link_company: 'https://axenya.com/',
         time_interval: 'NOV. 2022 — HOJE',
         description: `
-            Durante meu trabalho como freelancer na Axenya, tive a oportunidade de criar o site e blog da empresa do zero com validações e alinhamento de ponta a ponta, desde a criação da interface até o desenvolvimento final, utilizando Next.js e com integração com DatoCMS para o conteúdo do blog. 
-            Criando soluções onde o pessoal de conteúdo/marketing conseguisse de forma autônoma incluir e editar postagens e conteúdos do site (ranqueados) sem a necessidade do acionamento de algum desenvolvedor.
-            Essa experiência me permitiu demonstrar minha capacidade de trabalhar de forma autônoma e cumprir prazos, bem como minha habilidade em criar um site e blog responsivos e eficientes.
+            Durante meu trabalho como freelancer na Axenya, tive a oportunidade de criar o site e o blog da empresa do zero, com validações e alinhamentos de ponta a ponta. Isso envolveu desde a concepção da interface até o desenvolvimento final, utilizando Next.js e integrando-o ao DatoCMS para gerenciamento de conteúdo do blog.
+            Criei soluções que possibilitaram à equipe de conteúdo/marketing incluir e editar postagens e conteúdos no site (ranqueados) de forma autônoma, sem a necessidade de acionar algum desenvolvedor.
+            Essa experiência me permitiu demonstrar minha capacidade de trabalhar de forma autônoma, cumprindo prazos, e evidenciou minha habilidade em criar sites e blogs responsivos e eficientes.
         `,
         skills: ['React', 'NextJS', 'Typescript', 'Styled Component']
     },
@@ -39,9 +39,9 @@ export const experienceList = [
         link_company: 'https://www.cuponomia.com.br/',
         time_interval: 'NOV. 2018 — JUN. 2022',
         description: `
-            Trabalhei na Cuponomia como Front-end Junior, onde fui promovido a Front-end Pleno durante o meu tempo lá. Nesse período, fui responsável pela implementação/manutenção do site utilizando JS Vanilla e Razor ASP.NET para renderização SSR da plataforma responsiva web, com foco em performance e SEO. Também tive a oportunidade de trabalhar em sua extensão para o Google Chrome utilizando VueJS.
-            Além disso, possuo experiência em ferramentas de design, como Figma, e em diversas outras tecnologias de desenvolvimento web, como jQuery, HTML/CSS (Less, SCSS), Git e metodologias ágeis, incluindo Scrum e Kanban. Também tenho experiência em otimização de desempenho web, incluindo WebVitals e suas métricas.
+            Trabalhei na Cuponomia, ingressando como estagiário e sendo promovido a Front-end Pleno durante o meu tempo lá. Durante esse período, fui responsável pela implementação e manutenção do site, utilizando JS Vanilla e Razor ASP.NET para renderização SSR da plataforma responsiva web, com foco em performance e SEO. Além disso, tive a oportunidade de contribuir para a extensão para o Google Chrome utilizando VueJS.
+            Lá eu possui experiência em ferramentas de design, como Figma, onde fui capaz de contribuir com a criação de novos fluxos e interfaces. Além disso, lá obtive diversas experiências com outras tecnologias de desenvolvimento web, como jQuery, HTML/CSS (Less, SCSS), Git, e metodologias ágeis, incluindo Scrum e Kanban. Também tenho expertise em otimização de desempenho web, incluindo WebVitals e suas métricas.
         `,
-        skills: ['React', 'VueJS', 'Extension', 'Styled Component']
+        skills: ['React', 'VueJS', 'SEO', 'Browser Extension', 'Styled Component']
     }
 ];

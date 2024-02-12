@@ -32,11 +32,11 @@ export default function SectionAbout() {
             <div>
                 <h3 className='mb-6 text-3xl font-semibold'>Sobre</h3>
                 <p className='mb-6 font-light text-secondary-200'>
-                    Olá, meu nome é Roberto, tenho 24 anos e sou um desenvolvedor front-end. Com
-                    experiência em UI/UX design, em 2019 migrei para a área de desenvolvimento
-                    front-end durante meu estágio, e tenho trabalhado nesta área desde então. Minhas
-                    principais habilidades incluem React, Next, Vue, Typescript, Micro Front-End e
-                    entre outras.
+                    Olá, meu nome é Roberto, tenho 25 anos e sou um desenvolvedor front-end. Em
+                    2019, eu trabalhava com design UI/UX. Foi nesse período que decidi migrar para a
+                    área de desenvolvimento front-end durante meu estágio, e tenho trabalhado nesse
+                    campo desde então. Minhas principais habilidades incluem TypeScript, Next,
+                    React, Vue, micro front-end, entre outras.
                 </p>
                 <p className='mb-6 font-light text-secondary-200'>
                     Estou sempre procurando aprender novas tecnologias e aprimorar minhas
