@@ -40,7 +40,9 @@ async function ArticleContent({ slug }: ArticleContentProps) {
                         </a>
                     ))}
                 </div>
-                <h1 className='mb-4 text-5xl font-semibold leading-tight'>{article.title}</h1>
+                <h1 className='mb-4 text-3xl font-semibold leading-tight md:text-5xl'>
+                    {article.title}
+                </h1>
                 <div className='mb-4 flex items-center gap-4'>
                     <div className='h-16 w-16 overflow-hidden rounded-full'>
                         <Image

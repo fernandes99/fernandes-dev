@@ -2,19 +2,35 @@
 @tailwind components;
 @tailwind utilities;
 
+@media (min-width: 768px) {
+    #article-content h2 {
+        font-size: 1.6rem;
+    }
+
+    #article-content h3 {
+        font-size: 1.4rem;
+        font-weight: 500;
+    }
+
+    #article-content h4 {
+        font-size: 1.2rem;
+        font-weight: 500;
+    }
+}
+
 #article-content h2 {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     font-weight: 500;
     margin-top: 0.9rem;
 }
 
 #article-content h3 {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     font-weight: 500;
 }
 
 #article-content h4 {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: 500;
 }
 
