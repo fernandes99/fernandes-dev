@@ -4,8 +4,8 @@ import '../styles/global.css';
 import Header from '@/components/Header';
 import { config } from '@/config/general';
 import Footer from '@/components/Footer';
-import { GoogleAnalytics } from '@next/third-parties/google';
 import { Spotlight } from '@/components/Spotlight';
+import GoogleAnalytics from '@/components/GoogleAnalytics';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -62,6 +62,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     return (
         <html lang='pt-BR'>
             <body className={inter.className}>
+                <GoogleAnalytics />
                 <Header />
 
                 {children}
@@ -69,8 +70,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 <Footer />
                 <Spotlight />
             </body>
-
-            <GoogleAnalytics gaId={config.tokens.GA} />
         </html>
     );
 }

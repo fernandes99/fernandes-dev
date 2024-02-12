@@ -6,16 +6,16 @@ import { RxExternalLink } from 'react-icons/rx';
 
 import ProfileImagePrincipal from '@/assets/img/profile_image_01_20220626.png';
 import Image from 'next/image';
-import { sendGAEvent } from '@next/third-parties/google';
+import { sendGAEvent } from '@/utils/analytics';
 
 export default function SectionPrimary() {
     const onClickCV = () => {
-        sendGAEvent({ event: 'primary-section', label: 'button-cv', action: 'click' });
+        sendGAEvent('primary_section', 'button_cv');
         window.open('/docs/curriculo_roberto_fernandes_2023.pdf', '_blank');
     };
 
     const onClickProjects = () => {
-        sendGAEvent({ event: 'primary-section', label: 'button-projects', action: 'click' });
+        sendGAEvent('primary_section', 'button_projects');
         document.querySelector('#projetos')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
     };
 
