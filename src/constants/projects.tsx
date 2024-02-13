@@ -6,6 +6,7 @@ import ClickvetImage from '@/assets/img/clickvet_20231201.png';
 import BushFarmImage from '@/assets/img/bushfarm_20231201.png';
 import FernandesDevImage from '@/assets/img/fernandes_dev_20240111.png';
 import AxenyaImage from '@/assets/img/axenya_20240211.png';
+import TriunfoVersoImage from '@/assets/img/triunfoverso_20240213.png';
 
 import {
     BiLogoTypescript,
@@ -17,7 +18,7 @@ import {
     BiLogoCss3
 } from 'react-icons/bi';
 import { SiStyledcomponents } from 'react-icons/si';
-import { TbBrandNextjs } from 'react-icons/tb';
+import { TbBrandNextjs, TbBrandSocketIo } from 'react-icons/tb';
 import { RxFigmaLogo } from 'react-icons/rx';
 import { config } from '@/config/general';
 
@@ -81,6 +82,12 @@ const tool = {
         name: 'CSS3',
         url: 'https://developer.mozilla.org/pt-BR/docs/Web/CSS/',
         icon: <BiLogoCss3 />
+    },
+    socket_io: {
+        slug: 'socket-io',
+        name: 'Socket.io',
+        url: 'https://socket.io/',
+        icon: <TbBrandSocketIo />
     }
 };
 
@@ -107,6 +114,24 @@ export const projectList = [
     },
     {
         id: '3',
+        title: 'Triunfoverso',
+        description:
+            'Uma aplicação front e backend, utilizando websocket. O jogo simula um famoso jogo de cartas trunfo, escolhe o tema e jogue.',
+        tools: [
+            tool.node_js,
+            tool.nextjs,
+            tool.socket_io,
+            tool.typescript,
+            tool.react,
+            tool.tailwind,
+            tool.figma
+        ],
+        path_image: TriunfoVersoImage,
+        github_link: 'https://github.com/fernandes99/triunfoverso',
+        project_link: 'https://triunfoverso.vercel.app/'
+    },
+    {
+        id: '4',
         title: 'Batatinha Frita 123',
         description:
             'Um jogo em JS Puro, baseado em um dos jogos da série Round 6. Seu objetivo era de aprimorar minhas skills utilizando orientação a objeto com JS puro.',
@@ -116,7 +141,7 @@ export const projectList = [
         project_link: 'https://fernandes99.github.io/batatinha-frita-123/'
     },
     {
-        id: '4',
+        id: '5',
         title: 'Axenya',
         description:
             'Durante meu trabalho como freelancer na Axenya, tive a oportunidade de criar todo site e blog da empresa do zero com validações e alinhamento de ponta a ponta.',
@@ -126,17 +151,24 @@ export const projectList = [
         project_link: 'https://axenya.com/'
     },
     {
-        id: '5',
+        id: '6',
         title: 'Coupverse',
         description:
             'Um projeto front e backend em mono repo, utilizando websocket. O jogo simula um famoso jogo de cartas chamado Coup. Feito completo do protótipo ao código.',
-        tools: [tool.figma, tool.node_js, tool.typescript, tool.react, tool.styled_component],
+        tools: [
+            tool.node_js,
+            tool.socket_io,
+            tool.typescript,
+            tool.react,
+            tool.styled_component,
+            tool.figma
+        ],
         path_image: CoupverseImage,
         github_link: 'https://github.com/fernandes99/coupverse',
         project_link: 'https://coupverse.vercel.app/'
     },
     {
-        id: '6',
+        id: '7',
         title: 'Pokegoal',
         description:
             'Um jogo clássico de pokemon, onde há sistemas de captura e pokedex desses pequenos bichinhos. Feito completo do protótipo ao código.',
@@ -146,7 +178,7 @@ export const projectList = [
         project_link: 'https://pokegoal.netlify.com/'
     },
     {
-        id: '7',
+        id: '8',
         title: 'Clickvet',
         description:
             'Um sistema simples, onde busca, de acordo com o seu CEP, veterinários próximos com base em dados de uma planilha, utilizando o webhook do google sheets.',
@@ -156,7 +188,7 @@ export const projectList = [
         project_link: 'https://clickvet.netlify.com/'
     },
     {
-        id: '8',
+        id: '9',
         title: 'Bushfarm',
         description:
             'Um jogo de fazenda simples, onde você pode comprar e cultivar plantações. Imitando a ideia de uma mineração de cripto.',
