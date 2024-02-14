@@ -1,36 +1,54 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<h1 align="center">Fernandes Dev</h1>
+<p align="center">Olá, meu nome é Roberto. Bem vindo ao meu portfólio e blog pessoal. <a href="https://pokeclash.netlify.app/">Acesse aqui</a></p>
+<p align="center">
+  <img width=800 align="center" src="https://github.com/fernandes99/fernandes-dev/assets/49538386/2d5c47a3-4b3c-4fdb-8571-f7892411819e" />
+</p>
 
-## Getting Started
+<p align="center">
+  <img src="https://img.shields.io/static/v1?label=linguagem&message=typescript&color=3178C6&style=for-the-badge&logo=typescript"/>
+  <img src="https://img.shields.io/static/v1?label=framework&message=next.js&color=000000&style=for-the-badge&logo=next.js"/>
+  <img src="https://img.shields.io/static/v1?label=style&message=tailwind&color=06B6D4&style=for-the-badge&logo=tailwindcss"/>
+</p>
 
-First, run the development server:
+<hr />
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+> Status do Projeto: Em desenvolvimento :warning:
+
+## 🚀 Começando
+Estas instruções fornecerão as diretrizes para obter uma cópia do projeto em execução em sua máquina local, para fins de desenvolvimento e teste.
+
+### 📋 Pré-requisitos
+- Node v20+ (https://nodejs.org/en/download)
+- Versionador de pacotes Yarn (https://classic.yarnpkg.com/lang/en/docs/install)
+
+
+### 🔧 Instalação e Execução:
+Considerando que você já clonou o projeto em sua maquina, siga os seguintes passos:
+1. Instale suas depêndencias, executando:
+```
+yarn install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Inicie o projeto com
+```
+yarn dev
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### 🛠️ Feito Com:
+Abaixo segue as principais ferramentas e stacks que foi utilizado na criação deste projeto:
+* [Next.js](https://nextjs.org/) - Pricipal framework;
+* [Typescript](https://www.typescriptlang.org/) - Linguagem de programação;
+* [Tailwind](https://tailwindcss.com/) - Framework de estilos;]
+* [Prettier](https://prettier.io/) - Formatador de código;
+* [Eslint](https://eslint.org/) - Ferramenta de lint;
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+### 📁 Estrutura de Arquivos:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## ⚙️ Executando os testes
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## 📦 Implantação
+---
