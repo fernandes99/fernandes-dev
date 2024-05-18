@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from 'react';
 
-const SIZE = 60;
+const SIZE = 800;
 
 export function Spotlight() {
     const spotlightRef = useRef<HTMLDivElement | null>(null);

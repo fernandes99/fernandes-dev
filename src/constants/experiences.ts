@@ -7,7 +7,7 @@ export const experienceList = [
         time_interval: 'JUL. 2022 — HOJE',
         description: `
             Desde junho de 2022, trabalho como Front-end na MadeiraMadeira, onde tenho tido a oportunidade de aprimorar minhas habilidades em tecnologias como React, Next, Typescript e Micro front-end. Além disso, tenho experiência em testes unitários utilizando Jest e React Testing Library, bem como em Style Components e criação e manutenção de componentes em design system, o https://cavilha-ui.madeiramadeira.com.br. \n
-            Além das habilidades mencionadas anteriormente, também tenho experiência em integração com API REST. Trabalhei com várias APIs, incluindo integrações de pagamentos, autenticação e gerenciamento de usuários em plataforma de CRM interna, etc.. Sou capaz de criar e implementar chamadas de API em aplicativos front-end para consumir dados e recursos externos de maneira eficiente e segura.
+            Dentro da empresa, atuei em times internos criando projetos e fazendo manutenções em ferramentas de CRM. Atualmente, faço parte de um dos principais times de customer facing, onde temos responsabilidade nos principais fluxos do site, bem como a Homepage, página de produto, de categorias, etc.
         `,
         skills: [
             'React',
