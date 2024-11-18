@@ -5,14 +5,15 @@ import { ArticleService } from '@/services/articles';
 import { config } from '@/config/general';
 import SkeletonArticleContent from './contents/ArticleContent/skeleton';
 
-type MetadataProps = {
-    params: {
+type TParams = {
+    params: Promise<{
         article: string;
-    };
+    }>;
 };
 
-export async function generateMetadata({ params }: MetadataProps): Promise<Metadata> {
-    const article = await ArticleService.getBySlug(params.article);
+export async function generateMetadata({ params }: TParams): Promise<Metadata> {
+    const { article: articleParam } = await params;
+    const article = await ArticleService.getBySlug(articleParam);
 
     return {
         title: article.seo.title,
@@ -49,18 +50,16 @@ export async function generateMetadata({ params }: MetadataProps): Promise<Metad
     };
 }
 
-interface BlogPageProps {
-    params: {
-        article: string;
-    };
-}
+interface BlogPageProps extends TParams {}
 
-export default function BlogPage({ params }: BlogPageProps) {
+export default async function BlogPage({ params }: BlogPageProps) {
+    const { article } = await params;
+
     return (
         <main className='relative max-w-[2560px] py-20 lg:py-40'>
             <section className='container mx-auto grid max-w-[1020px] p-4 lg:p-0'>
                 <Suspense fallback={<SkeletonArticleContent />}>
-                    <ArticleContent slug={params.article} />
+                    <ArticleContent slug={article} />
                 </Suspense>
             </section>
         </main>

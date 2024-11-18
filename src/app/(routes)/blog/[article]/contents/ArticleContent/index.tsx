@@ -9,7 +9,7 @@ interface ArticleContentProps {
     slug: string;
 }
 
-async function ArticleContent({ slug }: ArticleContentProps) {
+async function ArticleContent({ slug }: Readonly<ArticleContentProps>) {
     const article = await ArticleService.getBySlug(slug);
     const articleUrl = `${config.urls.base}/blog/${article.slug}`;
     const twitterShareUrl = `https://twitter.com/share?text=${article.title}&url=${articleUrl}&hashtags=${article.tags.map((tag) => tag.slug).join(',')}`;
