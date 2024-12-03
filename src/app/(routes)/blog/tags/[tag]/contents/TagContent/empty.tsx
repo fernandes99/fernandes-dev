@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 function TagContentEmpty() {
     return (
         <div className='mb-4 flex flex-col items-center justify-center'>
@@ -6,7 +8,7 @@ function TagContentEmpty() {
                 Por favor tente novamente com uma tag diferente.
             </p>
             <p className='mb-2 text-sm font-medium text-secondary-200'>
-                <a href='/blog'>Voltar ao ínicio</a>
+                <Link href='/blog'>Voltar ao ínicio</Link>
             </p>
         </div>
     );
