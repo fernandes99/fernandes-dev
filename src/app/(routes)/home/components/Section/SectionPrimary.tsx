@@ -11,7 +11,7 @@ import { sendGAEvent } from '@/utils/analytics';
 export default function SectionPrimary() {
     const onClickCV = () => {
         sendGAEvent('primary_section', 'button_cv');
-        window.open('/docs/curriculo_roberto_fernandes_2023.pdf', '_blank');
+        window.open('/docs/curriculo_roberto_fernandes_2024.pdf', '_blank');
     };
 
     const onClickProjects = () => {

@@ -1,1 +1,4 @@
-export const About = {};
+export const About = {
+    firstP: '',
+    secondP: ''
+};
