@@ -6,8 +6,16 @@ export const experienceList = [
         link_company: 'https://madeiramadeira.com.br/',
         time_interval: 'JUL. 2022 — HOJE',
         description: `
-            Desde junho de 2022, trabalho como Front-end na MadeiraMadeira, onde tenho tido a oportunidade de aprimorar minhas habilidades em tecnologias como React, Next, Typescript e Micro front-end. Além disso, tenho experiência em testes unitários utilizando Jest e React Testing Library, bem como em Style Components e criação e manutenção de componentes em design system, o https://cavilha-ui.madeiramadeira.com.br. \n
-            Dentro da empresa, atuei em times internos criando projetos e fazendo manutenções em ferramentas de CRM. Atualmente, faço parte de um dos principais times de customer facing, onde temos responsabilidade nos principais fluxos do site, bem como a Homepage, página de produto, de categorias, etc.
+            Desde junho de 2022, atuo como Front-end Pleno na MadeiraMadeira, onde venho aprimorando minhas habilidades em React, Next.js, Typescript, React Native, testes unitários utilizando Jest/Vitest e ferramentas CMS (DatoCMS). Também tenho experiência com computação edge, utilizando ferramentas como Edgio e Azion (com diversas soluções cloud).
+            Minhas contribuições na MadeiraMadeira incluem:
+
+            - Desenvolvimento e manutenção de ferramentas internas de vendas: Criação e atualização de sistemas de CRM, gestão interna de colaboradores e administração de lojas.
+            - Desenvolvimento do site e app de e-commerce: Trabalhei nos principais fluxos de navegação das páginas de home, produto e landings.
+            - Criação e manutenção do design system web: Participei da criação e atualização do design system utilizado em diversos projetos da empresa.
+            - Migrações essenciais: Auxiliei na migração da edge da empresa (de Layer0 para Edgio) e atualizações importantes de bibliotecas, como a transição de Next.js 10 para 13 e outras…
+            - Implementações blue-green e teste a/b: Utilizando ferramentas de computação edge, implementei diversas features utilizando método blue green e teste a/b;
+            
+            Minhas responsabilidades incluem garantir a performance e escalabilidade das aplicações, além de colaborar com equipes multifuncionais para entregar soluções inovadoras e eficientes.
         `,
         skills: [
             'React',

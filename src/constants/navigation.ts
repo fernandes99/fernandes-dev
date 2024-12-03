@@ -18,3 +18,5 @@ export const navData = {
         }
     ]
 };
+
+export const LINK_CURRICULUM = '/docs/curriculo_roberto_fernandes_2024.pdf';

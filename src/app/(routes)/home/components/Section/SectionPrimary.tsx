@@ -1,17 +1,18 @@
 'use client';
 
-import { Button } from '@/components/Button';
 import { FaGithub, FaLinkedin, FaWhatsapp } from 'react-icons/fa';
 import { RxExternalLink } from 'react-icons/rx';
+import Image from 'next/image';
 
 import ProfileImagePrincipal from '@/assets/img/profile_image_01_20220626.png';
-import Image from 'next/image';
 import { sendGAEvent } from '@/utils/analytics';
+import { Button } from '@/components/Button';
+import { LINK_CURRICULUM } from '@/constants/navigation';
 
 export default function SectionPrimary() {
     const onClickCV = () => {
         sendGAEvent('primary_section', 'button_cv');
-        window.open('/docs/curriculo_roberto_fernandes_2024.pdf', '_blank');
+        window.open(LINK_CURRICULUM, '_blank');
     };
 
     const onClickProjects = () => {

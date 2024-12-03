@@ -2,6 +2,7 @@
 
 import { Tag } from '@/components/Tag';
 import { experienceList } from '@/constants/experiences';
+import { LINK_CURRICULUM } from '@/constants/navigation';
 import { UIEvent, useEffect, useRef, useState } from 'react';
 import { FiArrowUpRight, FiArrowRight, FiArrowLeft } from 'react-icons/fi';
 
@@ -100,8 +101,16 @@ export default function SectionExperience() {
                                     <FiArrowUpRight />
                                 </a>
                                 <p className='mb-4 text-secondary-200'>{experience.office}</p>
-                                <p className='mb-4 line-clamp-[8] font-light text-secondary-200'>
+                                <p className='group relative mb-4 line-clamp-[8] font-light text-secondary-200'>
                                     {experience.description}
+
+                                    <a
+                                        href={LINK_CURRICULUM}
+                                        target='_blank'
+                                        className='absolute bottom-0 left-0 flex h-12 w-full cursor-pointer items-center justify-center bg-[linear-gradient(180deg,#191E2400_0%,#191E24_100%)] font-medium text-white opacity-0 transition-all group-hover:opacity-100'
+                                    >
+                                        Ver mais...
+                                    </a>
                                 </p>
 
                                 <ul className='flex flex-wrap gap-2'>

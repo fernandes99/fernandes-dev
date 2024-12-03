@@ -1,6 +1,7 @@
 'use client';
 
 import ProfileImageAbout from '@/assets/img/about_image_profile_20231126.png';
+import { about } from '@/constants/about';
 import Image from 'next/image';
 import { useEffect, useRef, useState } from 'react';
 
@@ -31,17 +32,8 @@ export default function SectionAbout() {
         >
             <div>
                 <h3 className='mb-6 text-3xl font-semibold'>Sobre</h3>
-                <p className='mb-6 font-light text-secondary-200'>
-                    Olá, meu nome é Roberto, tenho 25 anos e sou um desenvolvedor front-end. Em
-                    2019, eu trabalhava com design UI/UX. Foi nesse período que decidi migrar para a
-                    área de desenvolvimento front-end durante meu estágio, e tenho trabalhado nesse
-                    campo desde então. Minhas principais habilidades incluem TypeScript, Next,
-                    React, Vue, micro front-end, entre outras.
-                </p>
-                <p className='mb-6 font-light text-secondary-200'>
-                    Estou sempre procurando aprender novas tecnologias e aprimorar minhas
-                    habilidades para desenvolver soluções de alta qualidade.
-                </p>
+                <p className='mb-6 font-light text-secondary-200'>{about.firstP}</p>
+                <p className='mb-6 font-light text-secondary-200'>{about.secondP}</p>
             </div>
 
             <div>
