@@ -31,7 +31,7 @@ export const experienceList = [
         id: '1',
         title: 'Axenya',
         office: 'Desenvolvedor Front-End | Freelance',
-        link_company: 'https://axenya.com/',
+        link_company: 'https://axenya-website.vercel.app/',
         time_interval: 'NOV. 2022 — HOJE',
         description: `
             Durante meu trabalho como freelancer na Axenya, tive a oportunidade de criar o site e o blog da empresa do zero, com validações e alinhamentos de ponta a ponta. Isso envolveu desde a concepção da interface até o desenvolvimento final, utilizando Next.js e integrando-o ao DatoCMS para gerenciamento de conteúdo do blog.
