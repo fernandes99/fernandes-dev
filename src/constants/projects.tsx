@@ -148,7 +148,7 @@ export const projectList = [
         tools: [tool.nextjs, tool.react, tool.styled_component, tool.typescript, tool.figma],
         path_image: AxenyaImage,
         github_link: '',
-        project_link: 'https://axenya.com/'
+        project_link: 'https://axenya-website.vercel.app/'
     },
     {
         id: '6',
